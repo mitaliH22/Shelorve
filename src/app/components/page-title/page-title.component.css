@@ -1,0 +1,11 @@
+.pageTitle {
+    border-bottom: 1px solid var(--lightGray);
+    padding-bottom: 15px;
+}
+
+.pageTitle h1 {
+    font-size: 18px;
+    color: var(--textColor);
+    margin-bottom: 0px;
+}
+

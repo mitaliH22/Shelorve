@@ -1,0 +1,110 @@
+<div id="leftPart" (mouseenter) ="mouseEnter() "  (mouseleave) ="mouseLeave()" >
+            <ul class="list-unstyled leftMenu" id="accordionExample">
+                <li class="meinMenu menuActive">
+                    <a href="" routerLink="/dashboard" class="leftMenuItem">
+                        <div class="menuImageContainer">
+                            <img src="./assets/Dashboard_white.svg" alt="dashboard" class="iconWhite" />
+                            <img src="./assets/Dashboard_teal.svg" alt="dashboard" class="iconTeal" />
+                        </div>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="meinMenu accordion-item ">
+                    <a href="javascript:void(0)" class="leftMenuItem collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <div class="menuImageContainer">
+                            <img src="./assets/framwork_white.svg" alt="dashboard" class="iconWhite" />
+                            <img src="./assets/framwork_teal.svg" alt="dashboard" class="iconTeal" />
+                        </div>
+                        <span>Framework</span>
+                    </a>
+
+                    <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <ul class="list-unstyled subMenu">
+                            <li>
+                                <a href="./domain.html">
+                                    <span class="menuLeftCircle"></span>
+                                    <span>Test 1</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./domain.html">
+                                    <span class="menuLeftCircle"></span>
+                                    <span>Test 2</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./domain.html">
+                                    <span class="menuLeftCircle"></span>
+                                    <span>Test 3</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="meinMenu accordion-item">
+                    <a href="javascript:void(0)" class="leftMenuItem collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <div class="menuImageContainer">
+                            <img src="./assets/maintenance.svg" alt="dashboard" class="iconWhite" />
+                            <img src="./assets/maintenance_teal.svg" alt="dashboard" class="iconTeal" />
+                        </div>
+                        <span>Maintenance</span>
+                    </a>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <ul class=" list-unstyled subMenu">
+                            <ul class="list-unstyled subMenu">
+                                <li>
+                                    <a href="" routerLink="/company">
+                                        <span class="menuLeftCircle"></span>
+                                        <span>Company Setup</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./framework-setup.html">
+                                        <span class="menuLeftCircle"></span>
+                                        <span>Framework Setup</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./user.html">
+                                        <span class="menuLeftCircle"></span>
+                                        <span>User</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </ul>
+                    </div>
+                </li>
+                <!-- <li class="meinMenu">
+                    <a href="#" class="leftMenuItem">
+                        <div class="menuImageContainer">
+                            <img src="./assets/user_white.svg" alt="dashboard" class="iconWhite" />
+                            <img src="./assets/user_teal.svg" alt="dashboard" class="iconTeal" />
+                        </div>
+                        <span>User</span>
+                    </a>
+                </li> -->
+                <li class="meinMenu">
+                    <a href="javascript:void(0)" class="leftMenuItem">
+                        <div class="menuImageContainer">
+                            <img src="./assets/settings_white.svg" alt="dashboard" class="iconWhite" />
+                            <img src="./assets/settings_teal.svg" alt="dashboard" class="iconTeal" />
+                        </div>
+                        <span>Setting</span>
+                    </a>
+                </li>
+
+                <li class="logout">
+                    <a href="javascript:void(0)" class="leftMenuItem">
+                        <div class="menuImageContainer">
+                            <img src="./assets/logout.svg" alt="dashboard" class="iconWhite" />
+                            <img src="./assets/logout.svg" alt="dashboard" class="iconTeal" />
+                        </div>
+                        <span>Logout</span>
+                    </a>
+                </li>
+            </ul>
+
+
+        </div>

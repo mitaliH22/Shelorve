@@ -1,0 +1,16 @@
+.breadcrumb-item+.breadcrumb-item::before{
+    content: url('/assets/right-arrow-dark.svg');
+    padding-right: 0;
+}
+.breadcrumb-item+.breadcrumb-item{
+    padding-left:0;
+}
+ li a {
+    color: var(--tealColor);
+}
+li{
+    font-size: 12px;
+}
+nav ul{
+    margin-bottom: 8px!important;
+}

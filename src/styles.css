@@ -1,1 +1,51 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --themeColor: #311154;
+  --tealColor: #2da1ad;
+  --hoverColor: #4d2776;
+  --textColor: #263959;
+  --textColorLight: #65758f;
+  --lightGray: #e7ebf3;
+  --lightGrayLight: #e7ebf380;
+  --orangeColor: #f28e00;
+  --greenColor: #60a12c;
+  --whiteColor: #ffffff;
+  --themeFont: "Roboto", sans-serif;
+  --circle: 50%;
+}
+
+body {
+  font-family: var(--themeFont);
+  font-size: 14px;
+  color: var(--textColor);
+  overflow-x: hidden;
+}
+
+a {
+  color: var(--textColor);
+  text-decoration: none;
+}
+
+input:focus,
+select:focus,
+textarea,
+.form-control {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: var(--lightGray) !important;
+}
+
+.dropdown-item {
+  font-size: 14px;
+  color: var(--textColor);
+}
+
+.dropdown-item img {
+  width: 16px;
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+  color: var(--textColor);
+  background-color: #f4f5f7;
+}

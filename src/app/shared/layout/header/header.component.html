@@ -1,0 +1,143 @@
+<header id="header">
+  <div class="container-fluid">
+    <div class="d-flex justify-content-between align-items-center">
+      <a routerLink="/dashboard" class="logo">
+        <img src="./assets/logo.png" class="img-fluid" />
+      </a>
+
+      <ul class="headerInfo list-unstyled d-flex align-items-center mb-0">
+        <li>
+          <div class="headerSearch">
+            <input type="text" placeholder="Search..." class="searchInput" />
+            <div class="searchIconContainer">
+              <img src="./assets/search.svg" />
+            </div>
+          </div>
+        </li>
+
+        <li class="headerNotification">
+          <div class="dropdown">
+            <a href="" class="dropdown-toggle position-relative" data-bs-toggle="dropdown" aria-expanded="false">
+              <span class="notificationBadge"></span>
+              <img src="./assets/notification.svg" class="img-fluid" />
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li>Notification 1</li>
+              <li>Notification 2</li>
+              <li>Notification 3</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="headerUser">
+          <div class="dropdown">
+            <a href="" class="dropdown-toggle position-relative" data-bs-toggle="dropdown" aria-expanded="false">
+              <div class="d-flex">
+                <div class="userName">
+                  <p class="name mb-0">Daniel Dsouza</p>
+                  <p class="role mb-0">Admin</p>
+                </div>
+                <div class="userImageContainer">
+                  <img src="./assets/userImage.png" />
+                </div>
+              </div>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li>
+                <a class="dropdown-item" href="javascript:void(0)">
+                  <img src="./assets/user_dark.svg" />
+                  Profile
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="javascript:void(0)">
+                  <img src="./assets/logout_dark.svg" />
+                  Logout
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+
+<div class="mobileHeader">
+  <nav class="navbar navbar-expand-lg navbar-light">
+  <div class="container-fluid">
+      <a routerLink="/dashboard" class="navbar-brand logo">
+        <img src="./assets/logo.png" class="img-fluid" />
+      </a>
+    <button class="navbar-toggler mobileMenuIcon" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class=""><img src="./assets/menu.png" class="img-fluid"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav list-unstyled mobileMenus">
+                    <li class="nav-item">
+                        <a href="./dashboard.html">
+                            <img src="./assets/Dashboard_dark.svg" alt="dashboard" class="iconTeal">
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a href="javascript:void(0)" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="./assets/framwork_dark.svg" alt="dashboard" class="iconTeal">
+                            <span>Framework</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="./domain.html">Test 1</a></li>
+                            <li><a href="./domain.html">Test 2</a></li>
+                            <li><a href="./domain.html">Test 3</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a href="javascript:void(0)" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="./assets/maintenance_dark.svg" alt="dashboard" class="iconTeal">
+                            <span>Maintenance</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="./company.html">Company Setup</a></li>
+                            <li><a href="./framework-setup.html">Framework Setup</a></li>
+                            <li><a href="./user.html">User</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="javascript:void(0)">
+                            <img src="./assets/settings_dark.svg" alt="dashboard" class="iconTeal">
+                            <span>Setting</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="javascript:void(0)">
+                            <img src="./assets/user_dark.svg" alt="dashboard" class="iconTeal">
+                            <span>My Profile</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="javascript:void(0)">
+                            <img src="./assets/logout_dark.svg" alt="dashboard" class="iconTeal">
+                            <span>Logout</span>
+                        </a>
+                    </li>
+                    <li class="nav-item w-100">
+                        <div class="headerSearch">
+                            <input type="text" placeholder="Search..." class="searchInput">
+                            <div class="searchIconContainer">
+                                <img src="./assets/search.svg">
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+    </div>
+  </div>
+</nav>
+
+</div>

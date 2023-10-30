@@ -1,0 +1,192 @@
+#leftPart {
+  width: 200px;
+  height: calc(100vh - 110px);
+  background: var(--themeColor);
+  position: fixed;
+  top: 90px;
+  left: 20px;
+  border-radius: 25px;
+  padding-top: 10px;
+  overflow: hidden;
+}
+
+#leftPart .leftMenu .leftMenuItem img.iconTeal {
+  opacity: 0;
+}
+
+#leftPart .meinMenu:hover {
+  background: var(--hoverColor);
+}
+
+#leftPart .meinMenu:hover .leftMenuItem img.iconTeal {
+  opacity: 1;
+}
+#leftPart .meinMenu:hover .leftMenuItem img.iconWhite {
+  opacity: 0;
+}
+
+#leftPart .meinMenu.menuActive {
+  background: var(--hoverColor);
+}
+
+#leftPart .meinMenu.menuActive .leftMenuItem img.iconTeal {
+  opacity: 1;
+}
+#leftPart .meinMenu.menuActive .leftMenuItem img.iconWhite {
+  opacity: 0;
+}
+
+#leftPart .meinMenu .accordion-button:not(.collapsed) {
+  background: var(--hoverColor);
+}
+
+#leftPart .leftMenu .leftMenuItem {
+  height: 52px;
+  display: flex;
+  align-items: center;
+}
+
+#leftPart .leftMenu .leftMenuItem .menuImageContainer {
+  min-width: 62px;
+  height: 52px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#leftPart .leftMenu .leftMenuItem img {
+  position: absolute;
+}
+
+#leftPart .leftMenu .leftMenuItem span {
+  color: #fff;
+  flex: 1;
+  position: relative;
+}
+
+#leftPart .leftMenu .subMenu span {
+  min-width: 130px;
+}
+
+#leftPart .leftMenu .subMenu .menuLeftCircle {
+  height: 36px;
+  min-width: 62px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+}
+
+#leftPart .leftMenu .subMenu a {
+  display: flex;
+  align-items: center;
+  color: var(--whiteColor);
+}
+
+#leftPart .leftMenu .subMenu .menuLeftCircle::before {
+  content: "";
+  height: 9px;
+  width: 9px;
+  border-radius: 50%;
+  border: 1px solid var(--themeColor);
+  background: var(--hoverColor);
+  display: block;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+  z-index: 9;
+}
+
+#leftPart .leftMenu .subMenu .menuLeftCircle::after {
+  content: "";
+  height: 100%;
+  width: 1px;
+  background: var(--themeColor);
+  display: block;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+  bottom: -50%;
+}
+
+#leftPart .leftMenu .subMenu li a:hover span:before {
+  border-color: transparent;
+  background: var(--tealColor);
+}
+
+#leftPart .leftMenu .subMenu li a.submenuActive span:before {
+  border-color: transparent;
+  background: var(--tealColor);
+}
+
+#leftPart .leftMenu .subMenu li:last-child .menuLeftCircle::after {
+  display: none;
+}
+
+#leftPart .leftMenu .logout {
+  background: var(--tealColor);
+  position: absolute;
+  bottom: 5px;
+  width: calc(100% - 10px);
+  border-radius: 20px;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+}
+
+#leftPart .leftMenu .logout .menuImageContainer {
+  min-width: 52px;
+}
+
+#leftPart {
+  width: 62px;
+  transition: width 0.5s ease-in-out;
+}
+
+#leftPart .leftMenu .leftMenuItem.collapsed span:after {
+  transform: rotate(180deg);
+  transition: all 0.5s ease-in-out;
+}
+
+#leftPart .meinMenu.accordion-item .leftMenuItem span:after {
+  content: "";
+  background: url('/assets/menuArrow.svg') no-repeat center;
+  height: 24px;
+  width: 24px;
+  display: block;
+  position: absolute;
+  right: 10px;
+  bottom: 0px;
+  transition: all 0.5s ease-in-out;
+}
+
+#leftPart span {
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+ #leftPart.toggleSlide {
+  width: 200px;
+}
+
+ #leftPart.toggleSlide span {
+  opacity: 1;
+}
+
+
+#leftPart .meinMenu:hover,.accordion-item:hover {
+    background-color: #4d2776;
+}
+
+.accordion-item {
+  background-color: #311154;
+}
+
+@media only screen and (max-width: 768px){
+    #leftPart {
+    display: none;
+  }
+}

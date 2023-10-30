@@ -1,0 +1,13 @@
+<nav aria-label="breadcrumb">
+  <ul class="list-unstyled d-flex align-items-center">
+    <ng-container *ngFor="let breadcrumb of breadcrumbs; let last = last">
+      <li class="breadcrumb-item" *ngIf="!last">
+        <a [routerLink]="getLink(breadcrumb)">{{ breadcrumb }}</a>
+      </li>
+      <li *ngIf="!last" >
+          <img src="./assets/right-arrow-dark.svg" width="18px">
+      </li>
+      <li *ngIf="last">{{ breadcrumb }}</li>
+    </ng-container>
+  </ul>
+</nav>
