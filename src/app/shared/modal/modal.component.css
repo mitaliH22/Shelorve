@@ -1,0 +1,69 @@
+.modal-body {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.modal.left .modal-dialog,
+.modal.right .modal-dialog {
+  position: fixed;
+  margin: auto;
+  width: 500px;
+  height: 100vh;
+  -webkit-transform: translate3d(0%, 0, 0);
+  -ms-transform: translate3d(0%, 0, 0);
+  -o-transform: translate3d(0%, 0, 0);
+  transform: translate3d(0%, 0, 0);
+}
+
+.modal.left .modal-content,
+.modal.right .modal-content {
+  height: 100vh;
+  overflow-y: auto;
+  border-radius: 0px;
+}
+
+.modal.left .modal-body,
+.modal.right .modal-body {
+  padding: 15px 15px 80px;
+}
+
+/*Right*/
+.modal.right.fade .modal-dialog {
+  right: -500px;
+  -webkit-transition: opacity 0.3s linear, right 0.3s ease-out;
+  -moz-transition: opacity 0.3s linear, right 0.3s ease-out;
+  -o-transition: opacity 0.3s linear, right 0.3s ease-out;
+  transition: opacity 0.3s linear, right 0.3s ease-out;
+}
+
+.modal.right.fade.show .modal-dialog {
+  right: 0;
+}
+
+.modal .btn-close {
+  background: url('/assets/Close_white.svg') no-repeat center;
+  opacity: 1;
+}
+.modal .btn-close:focus {
+  box-shadow: none;
+}
+
+.popupHeader {
+  background: var(--tealColor);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+  border-radius: 0px;
+}
+
+.popupHeader h2 {
+    font-size: 18px;
+    color: var(--whiteColor)!important;
+    margin: 0px;
+    font-weight: 400;
+}
+
+.offcanvas-end{
+    width:500px;
+}

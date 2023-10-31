@@ -1,0 +1,13 @@
+
+<div class="d-flex justify-content-between paginations">
+  <p class="mb-0">Showing {{ resultsPerPage }} results out of {{ totalResults }}</p>
+
+  <ul class="paginationContainer list-unstyled d-flex">
+    <li><a href="javascript:void(0)"><img src="./assets/left_arrow_dark.svg"></a></li>
+    <li *ngFor="let page of pages" [class.active]="currentPage === page"><a href="javascript:void(0)" (click)="goToPage(page)">{{ page }}</a></li>
+    <li><a href="javascript:void(0)"><img src="./assets/right_arrow_teal.svg"></a></li>
+  </ul>
+</div>
+
+
+

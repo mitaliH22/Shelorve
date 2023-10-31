@@ -1,0 +1,94 @@
+.rightPopup {
+  height: 100vh;
+  max-width: 500px;
+  width: 100%;
+  background: var(--whiteColor);
+  position: fixed;
+  right: 0px;
+  z-index: 999;
+  top: 0px;
+  transform: translateX(500px);
+  transition: all 0.5s ease-in-out;
+  padding: 0px;
+}
+.popupTransBG {
+  background: rgba(0, 0, 0, 0.65);
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  z-index: -1;
+}
+
+.popupHeader {
+  background: var(--tealColor);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+  border-radius: 0px;
+}
+
+.popupHeader h2 {
+  font-size: 18px;
+  color: var(--whiteColor);
+  margin: 0px;
+  font-weight: 400;
+}
+
+.formContainer {
+  padding: 30px;
+}
+.formContainer label span {
+  color: red;
+}
+
+body.showPopup .popupTransBG {
+  opacity: 1;
+  z-index: 99;
+}
+
+body.showPopup .rightPopup {
+  transform: translateX(0px);
+}
+
+.cancelButton {
+  width: 120px;
+  background: var(--tealColor);
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--whiteColor);
+  display: block;
+  border: none;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 14px;
+}
+.saveButton {
+  width: 120px;
+  background: var(--orangeColor);
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--whiteColor);
+  display: block;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+.form-label{
+    font-size:14px;
+}
+
+.form-select {
+    font-size: 14px;
+    color: var(--textColor);
+}

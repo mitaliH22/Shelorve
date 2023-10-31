@@ -16,13 +16,4 @@ export class BreadcrumbComponent implements OnInit {
       this.breadcrumbs = breadcrumbs;
     });
   }
-
-  getLink(breadcrumb: string): string {
-    switch (breadcrumb) {
-      case 'Home':
-        return '/home';
-      default:
-        return '/';
-    }
-  }
 }

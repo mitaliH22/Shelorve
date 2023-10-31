@@ -1,0 +1,27 @@
+.paginationContainer {
+    background: #e7ebf3;
+    padding: 0px 20px;
+    border-radius: 20px;
+    height: 40px;
+    align-items: center;
+    gap: 5px;
+}
+.paginationContainer li a img {
+    margin-bottom: 2px;
+}
+.paginationContainer li a.active {
+    color: var(--tealColor);
+}
+
+.paginations {
+    padding: 0px 30px;
+}
+
+@media only screen and (max-width: 768px){
+.paginations {
+    padding: 0px;
+}
+.paginationContainer {
+    padding: 0px 10px;
+}
+}

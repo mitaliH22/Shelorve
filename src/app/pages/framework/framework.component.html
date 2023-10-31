@@ -1,0 +1,13 @@
+<app-admin-layout>   
+</app-admin-layout>
+<div class="contentWrapper">
+<!-- <app-page-title [breadcrumbText]="pageTitle" [breadcrumbIconSrc]="pageIconSrc"></app-page-title> -->
+<app-page-header></app-page-header>
+<app-table></app-table>
+<app-pagination
+  [resultsPerPage]="10"
+  [totalResults]="20"
+  [currentPage]="1"
+  (pageChange)="onPageChange($event)"
+></app-pagination>
+</div>

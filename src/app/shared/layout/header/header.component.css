@@ -172,6 +172,10 @@ div#navbarNavDropdown {
     .mobileHeader .headerBottom .headerInfo {
     gap: 20px 40px;
   }
+  
+  header#header {
+    display: none;
+  }
 
 }
 

@@ -1,0 +1,108 @@
+.sortTableContainer {
+  padding: 10px 30px;
+  color: var(--textColor);
+}
+
+.sortTableContainer td span.bi {
+  color: var(--orangeColor);
+  font-size: 16px;
+}
+
+.sortTableContainer td i {
+  font-size: 16px;
+}
+
+.sortTableContainer td {
+  font-weight: 500;
+  color: var(--blackColor);
+}
+
+.sortTableContainer td .dropdown-toggle::after {
+  display: none;
+}
+
+.sortTableContainer th {
+  font-weight: 500;
+  color: var(--darkGray);
+}
+
+/* Tables */
+
+.sortTableContainer table th,
+.sortTableContainer table td {
+  position: relative;
+  padding: 12px 15px 12px 0px;
+  color: var(--textColor);
+  font-weight: 400;
+}
+.sortTableContainer table th {
+  color: var(--textColorLight);
+}
+
+/* Arrows */
+.sortTableContainer table th span {
+  position: relative;
+}
+.sortTableContainer table th span:after,
+.sortTableContainer table th span:before {
+  border: 0.35em solid transparent;
+  content: "";
+  height: 0;
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: border-color 0.2s ease-in-out;
+  width: 0;
+}
+
+.sortTableContainer table th span:before {
+  border-bottom-color: rgba(0, 0, 0, 0.25);
+  border-top: 0;
+  margin-top: -2px;
+}
+
+.sortTableContainer table th span:after {
+  border-bottom: 0;
+  border-top-color: rgba(0, 0, 0, 0.25);
+  margin-top: 0.35em;
+}
+
+.sortTableContainer table th span:hover:before,
+.sortTableContainer table th span:focus:before {
+  border-bottom-color: rgba(0, 0, 0, 0.75);
+}
+
+.sortTableContainer table th span:hover:after,
+.sortTableContainer table th span:focus:after {
+  border-top-color: rgba(0, 0, 0, 0.75);
+}
+
+.sortTableContainer table th[aria-sort="ascending"] span:before {
+  border-bottom-color: #000000;
+}
+
+.sortTableContainer table th[aria-sort="ascending"] span:after {
+  border-top-color: rgba(0, 0, 0, 0.25);
+}
+
+.sortTableContainer table th[aria-sort="descending"] span:before {
+  border-bottom-color: rgba(0, 0, 0, 0.25);
+}
+
+.sortTableContainer table th[aria-sort="descending"] span:after {
+  border-top-color: #000000;
+}
+
+
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+@media only screen and (max-width: 768px){
+.sortTableContainer {
+    padding: 10px 0px
+;
+}
+}

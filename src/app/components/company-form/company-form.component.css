@@ -1,0 +1,77 @@
+.inputIcon {
+  position: absolute;
+  right: 25px;
+  bottom: 7px;
+}
+
+.iti {
+  width: 100%;
+}
+.form-select {
+  font-size: 14px;
+  color: var(--textColor);
+}
+table img {
+  min-width: 22px;
+}
+table .rating img {
+  width: 16px;
+}
+
+.popupButtonFixed {
+  gap: 20px;
+  position: fixed;
+  right: 17px;
+  bottom: 0px;
+  width: calc(100% - 18px);
+  background: #fff;
+  padding: 15px 30px;
+}
+.pageTitle .tableFilters img {
+  width: 34px;
+}
+.pageTitle .tableFilters .headerSearch img {
+  width: 18px;
+}
+
+.formContainer label span {
+    color: red;
+}
+
+.formContainer {
+    padding: 30px;
+}
+
+.form-control {
+    font-size: 14px;
+    color: var(--textColor);
+    height: 38px;
+}
+
+.saveButton {
+    width: 120px;
+    background: var(--orangeColor);
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--whiteColor);
+    display: block;
+    border: none;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+.cancelButton {
+    width: 120px;
+    background: var(--tealColor);
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--whiteColor);
+    display: block;
+    border: none;
+    border-radius: 5px;
+    font-weight: 500;
+}

@@ -8,6 +8,9 @@ import { BreadcrumbService } from 'src/app/services/breadcrumb.service';
   styleUrls: ['./company.component.css'],
 })
 export class CompanyComponent {
+  pageTitle: string = 'Company Setup';
+  pageIconSrc: string = './assets/maintenance_dark.svg';
+  
   constructor(
     private route: ActivatedRoute,
     private breadcrumbService: BreadcrumbService

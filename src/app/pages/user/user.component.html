@@ -1,0 +1,12 @@
+<app-admin-layout>   
+</app-admin-layout>
+<div class="contentWrapper">
+    <app-page-header></app-page-header>
+    <app-user-list></app-user-list>
+    <app-pagination
+  [resultsPerPage]="10"
+  [totalResults]="20"
+  [currentPage]="1"
+  (pageChange)="onPageChange($event)"
+></app-pagination>
+    </div>

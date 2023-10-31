@@ -1,0 +1,10 @@
+<div class="offcanvas offcanvas-end" tabindex="-1" [id]="modalId" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header popupHeader">
+    <h2 id="offcanvasRightLabel">{{ modalTitle }}</h2>
+    <button type="button" class="btn-close text-reset" (click)="closeModal()" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="">
+    <ng-content></ng-content>
+  </div>
+</div>
+

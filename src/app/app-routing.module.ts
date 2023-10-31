@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { MaintenanceComponent } from './pages/maintenance/maintenance.component';
 import { CompanyComponent } from './pages/company/company.component';
+import { FrameworkComponent } from './pages/framework/framework.component';
+import { UserComponent } from './pages/user/user.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
@@ -12,6 +14,16 @@ const routes: Routes = [
     path: 'company',
     component: CompanyComponent,
     data: { breadcrumb: 'Company Setup' },
+  },
+  {
+    path: 'framework',
+    component: FrameworkComponent,
+    data: { breadcrumb: 'Framework Setup' },
+  },
+  {
+    path: 'users',
+    component: UserComponent,
+    data: { breadcrumb: 'User' },
   },
 ];
 

@@ -1,0 +1,74 @@
+<form class="formContainer">
+                <div class="row">
+                    <div class="col-md-6 mb-3 position-relative">
+                        <label class="form-label">Company ID</label>
+                        <input type="text" value="CP-108564" class="form-control" readonly disabled />
+                    </div>
+
+                    <div class="col-md-6 mb-3 position-relative">
+                        <label class="form-label">Company Name<span>*</span></label>
+                        <input type="text" class="form-control" required />
+                        <img src="./assets/companyName.svg" class="inputIcon" />
+                    </div>
+
+                    <div class="col-md-6 mb-3 position-relative">
+                        <label class="form-label">Email<span>*</span></label>
+                        <input type="text" class="form-control" required />
+                        <img src="./assets/formEmail.png" class="inputIcon" />
+                    </div>
+
+                    <div class="col-md-6 mb-3 position-relative">
+                        <label class="form-label">Phone<span>*</span></label>
+                        <input type="tel" id="phone" class="form-control" required />
+                        <img src="./assets/formCall.svg" class="inputIcon" />
+                    </div>
+
+                    <div class="col-md-12 mb-3 position-relative">
+                        <label class="form-label">Address 1<span>*</span></label>
+                        <input type="text" class="form-control" required />
+                        <img src="./assets/formMap.svg" class="inputIcon" />
+                    </div>
+
+                    <div class="col-md-12 mb-3 position-relative">
+                        <label class="form-label">Address 2<span>*</span></label>
+                        <input type="text" class="form-control" required />
+                        <img src="./assets/formMap.svg" class="inputIcon" />
+                    </div>
+
+                    <div class="col-md-3 mb-3">
+                        <label class="form-label">City<span>*</span></label>
+                        <select class="form-select" id="validationCustom04" required>
+                            <option selected disabled value="">Choose City...</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-3 mb-3">
+                        <label class="form-label">State<span>*</span></label>
+                        <select class="form-select" id="validationCustom04" required>
+                            <option selected disabled value="">Choose State...</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-3 mb-3">
+                        <label class="form-label">Country<span>*</span></label>
+                        <select class="form-select" id="validationCustom04" required>
+                            <option selected disabled value="">Choose Country...</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-3 mb-3 position-relative">
+                        <label class="form-label">Zip Code<span>*</span></label>
+                        <input type="text" class="form-control" required />
+                        <img src="./assets/formZip.svg" class="inputIcon" />
+                    </div>
+
+                    <div class="d-flex justify-content-end align-items-center mt-4" style="gap: 20px;">
+                        <input type="button" value="Cancel" class="saveButton" data-bs-dismiss="modal"
+                            aria-label="Close">
+                        <button type="submit" class="cancelButton">Save</button>
+                    </div>
+                </div>
+            </form>
