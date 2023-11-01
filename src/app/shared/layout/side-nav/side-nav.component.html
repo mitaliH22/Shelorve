@@ -1,6 +1,6 @@
 <div id="leftPart" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()" [class.toggleSlide]="isHovered" >
             <ul class="list-unstyled leftMenu" id="accordionExample">
-                <li class="meinMenu menuActive">
+                <li class="meinMenu " [class.menuActive]="'/dashboard' | activeRoute" >
                     <a href="" routerLink="/dashboard" class="leftMenuItem">
                         <div class="menuImageContainer">
                             <img src="./assets/images/Dashboard_white.svg" alt="dashboard" class="iconWhite" />
@@ -9,8 +9,8 @@
                         <span>Dashboard</span>
                     </a>
                 </li>
-                <li class="meinMenu accordion-item ">
-                    <a href="javascript:void(0)" class="leftMenuItem collapsed" data-bs-toggle="collapse"
+                <li class="meinMenu accordion-item " [class.menuActive]="menuItems | activeRoute">
+                    <a href="javascript:void(0)" class="leftMenuItem " [class]="{'collapsed': !(menuItems | activeRoute)}" data-bs-toggle="collapse"
                         data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                         <div class="menuImageContainer">
                             <img src="./assets/images/framwork_white.svg" alt="dashboard" class="iconWhite" />
@@ -19,10 +19,10 @@
                         <span>Framework</span>
                     </a>
 
-                    <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div id="collapseOne" [class]="{'show': (menuItems | activeRoute)}" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                         <ul class="list-unstyled subMenu">
                                 <li *ngFor="let menuItem of menuItems">
-                                <a [href]="menuItem.link">
+                                <a [class.activeIcon]="menuItem.link | activeRoute" [href]="menuItem.link">
                                     <span class="menuLeftCircle"></span>
                                     <span>{{ menuItem.label }}</span>
                                 </a>
@@ -30,8 +30,8 @@
                         </ul>
                     </div>
                 </li>
-                <li class="meinMenu accordion-item">
-                    <a href="javascript:void(0)" class="leftMenuItem collapsed" data-bs-toggle="collapse"
+                <li class="meinMenu accordion-item" [class.menuActive]="submenuItems | activeRoute">
+                    <a href="" [class]="{'collapsed': !(menuItems | activeRoute)}" class="leftMenuItem" data-bs-toggle="collapse"
                         data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                         <div class="menuImageContainer">
                             <img src="./assets/images/maintenance.svg" alt="dashboard" class="iconWhite" />
@@ -39,29 +39,16 @@
                         </div>
                         <span>Maintenance</span>
                     </a>
-                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                        <ul class=" list-unstyled subMenu">
-                            <ul class="list-unstyled subMenu">
-                                <li>
-                                    <a href="" routerLink="/company">
-                                        <span class="menuLeftCircle"></span>
-                                        <span>Company Setup</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="" routerLink="/framework">
-                                        <span class="menuLeftCircle"></span>
-                                        <span>Framework Setup</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="" routerLink="/users">
-                                        <span class="menuLeftCircle"></span>
-                                        <span>User</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </ul>
+                    <div [class]="{'show': (submenuItems | activeRoute)}" id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <ul class="list-unstyled subMenu">
+                            <li *ngFor="let submenuItem of submenuItems">
+                              <a [routerLink]="submenuItem.link" [class.activeIcon]="submenuItem.link | activeRoute">
+                                <span class="menuLeftCircle"></span>
+                                <span>{{ submenuItem.label }}</span>
+                              </a>
+                            </li>
+                          </ul>
+                          
                     </div>
                 </li>
                 <!-- <li class="meinMenu">
@@ -73,7 +60,7 @@
                         <span>User</span>
                     </a>
                 </li> -->
-                <li class="meinMenu">
+                <li class="meinMenu" [class.menuActive]="'/settings' | activeRoute">
                     <a href="javascript:void(0)" class="leftMenuItem">
                         <div class="menuImageContainer">
                             <img src="./assets/images/settings_white.svg" alt="dashboard" class="iconWhite" />

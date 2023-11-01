@@ -39,6 +39,7 @@ import { UploadFormComponent } from './shared/upload-form/upload-form.component'
 import { FrameworkControlsAddComponent } from './components/framework-controls/framework-controls-add/framework-controls-add.component';
 import { FrameworkControlsFormComponent } from './components/framework-controls-form/framework-controls-form.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ActiveRoutePipe } from './active-route.pipe';
 
 
 @NgModule({
@@ -79,6 +80,7 @@ import { HttpClientModule } from '@angular/common/http';
     UploadFormComponent,
     FrameworkControlsAddComponent,
     FrameworkControlsFormComponent,
+    ActiveRoutePipe,
   ],
   imports: [
     BrowserModule,

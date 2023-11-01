@@ -1,44 +1,24 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { MaintenanceComponent } from './pages/maintenance/maintenance.component';
 import { CompanyComponent } from './pages/company/company.component';
 import { FrameworkComponent } from './pages/frameworkSetup/framework.component';
 import { UserComponent } from './pages/user/user.component';
 import { FrameworkPageComponent } from './pages/framework-page/framework-page.component';
-import { DomainComponent } from './components/framework-domain/domain/domain.component';
-import { ControlsComponent } from './components/framework-controls/controls/controls.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
   { path: 'dashboard', component: DashboardComponent },
-  { path: 'maintainance', component: MaintenanceComponent },
-  {
-    path: 'company',
-    component: CompanyComponent,
-    data: { breadcrumb: 'Company Setup' },
-  },
-  {
-    path: 'framework',
-    component: FrameworkComponent,
-    data: { breadcrumb: 'Framework Setup' },
-  },
-  {
-    path: 'users',
-    component: UserComponent,
-    data: { breadcrumb: 'User' },
-  },
+  { path: 'maintenance', component: MaintenanceComponent },
+  { path: 'company', component: CompanyComponent, data: { breadcrumb: 'Company Setup' } },
+  { path: 'framework', component: FrameworkComponent, data: { breadcrumb: 'Framework Setup' } },
+  { path: 'users', component: UserComponent, data: { breadcrumb: 'User' } },
   {
     path: 'frameworks',
     children: [
-      {
-        path: 'test',
-        component: FrameworkPageComponent,
-      },
-      {
-        path: ':frameworkName', 
-        component: FrameworkPageComponent,
-      },
+      { path: ':frameworkName', component: FrameworkPageComponent },
     ],
   },
 ];
@@ -47,4 +27,4 @@ const routes: Routes = [
   imports: [RouterModule, RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

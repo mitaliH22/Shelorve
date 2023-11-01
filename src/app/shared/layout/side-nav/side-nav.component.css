@@ -112,9 +112,9 @@
   bottom: -50%;
 }
 
-#leftPart .leftMenu .subMenu li a:hover span:before {
-  border-color: transparent;
-  background: var(--tealColor);
+#leftPart .leftMenu .subMenu li a:hover span:before, .activeIcon span:before {
+  border-color: transparent!important;
+  background: var(--tealColor)!important;
 }
 
 #leftPart .leftMenu .subMenu li a.submenuActive span:before {
@@ -190,3 +190,4 @@
     display: none;
   }
 }
+
