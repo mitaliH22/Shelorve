@@ -12,7 +12,6 @@ import { MaintenanceComponent } from './pages/maintenance/maintenance.component'
 import { CompanyComponent } from './pages/company/company.component';
 import { PageTitleComponent } from './components/page-title/page-title.component';
 import { CompanyFormComponent } from './components/company-form/company-form.component';
-import { NgxIntlTelInputModule } from '@khazii/ngx-intl-tel-input';
 import { FrameworkComponent } from './pages/frameworkSetup/framework.component';
 import { PageHeaderComponent } from './shared/page-header/page-header.component';
 import { TableComponent } from './components/MaintenanceFramework/maintenance-framework-table/table.component';
@@ -86,8 +85,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     HttpClientModule,
     RouterModule,
-    RouterModule.forRoot([]),
-    NgxIntlTelInputModule,
+    RouterModule.forRoot([])
   ],
   providers: [],
   bootstrap: [AppComponent],
