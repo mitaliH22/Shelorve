@@ -49,3 +49,157 @@ textarea,
   color: var(--textColor);
   background-color: #f4f5f7;
 }
+
+.form-control{
+  border-radius: 0.375rem;
+}
+
+@media only screen and (max-width: 768px){
+.offcanvas-end {
+    width: 300px!important;
+}
+.formContainer {
+    padding: 10px 15px!important;
+}
+}
+
+
+.effectMenu .contentWrapper {
+  margin-left: 240px!important;
+  transition: all 0.5s ease-in-out!important;
+}
+
+.selected {
+  background-color: #4d2776!important;
+}
+
+.sortTableContainer {
+    padding: 10px 30px;
+    color: var(--textColor);
+}
+
+.projectsPage .accordion-item {
+    border-bottom: 1px solid var(--lightGray) !important;
+    margin-bottom: 10px;
+}
+
+.projectsPage .accordion-item .itemHead {
+    background: var(--lightGrayLight);
+    background: none;
+    padding: 10px 15px;
+}
+.assessmentId {
+    width: 100px;
+}
+
+.projectsPage .accordion-item .accordion-button {
+    padding: 0px;
+    width: max-content;
+    font-size: 12px;
+    margin-top: 10px;
+    font-weight: 700;
+    color: var(--textColorLight);
+}
+
+.projectsPage .accordion-button.collapsed {
+    color: var(--tealColor) !important;
+    background: none;
+}
+
+.assessmentId {
+    width: 100px;
+}
+
+.projectsPage .accordion-item ul li span {
+    padding: 0px 10px;
+}
+
+.assessmentName {
+    min-width: 220px;
+    display: flex;
+}
+
+.projectsPage .accordion-item ul li b {
+    color: var(--textColorLight);
+}
+
+.assessmentStartDate {
+    min-width: 163px;
+}
+
+.assessmentEndDate {
+    min-width: 156px;
+}
+
+.assessmentStatus {
+    min-width: 85px;
+}
+.assessmentRating {
+    min-width: 194px;
+}
+
+.projectsPage .accordion-button::after {
+    width: 12px;
+    height: 12px;
+    margin-left: 10px;
+    background-size: 12px;
+}
+
+.projectsPage .accordion-item ul li i {
+    font-style: normal;
+}
+
+
+.sortTableContainer table th span {
+    position: relative;
+}
+
+.sortTableContainer table th span:before {
+    border-bottom-color: rgba(0, 0, 0, 0.25)!important;
+    border-top: 0!important;
+    margin-top: -2px!important;
+}
+
+.sortTableContainer table th span:after {
+    border-bottom: 0!important;
+    border-top-color: rgba(0, 0, 0, 0.25)!important;
+    margin-top: 0.35em!important;
+}
+
+.sortTableContainer table th {
+    color: var(--textColorLight);
+    font-weight: 400;
+}
+
+.sortTableContainer table th span:hover:before, .sortTableContainer table th span:focus:before {
+    border-bottom-color: rgba(0, 0, 0, 0.75)!important;
+}
+
+.sortTableContainer table th span:hover:after, .sortTableContainer table th span:focus:after {
+    border-top-color: rgba(0, 0, 0, 0.75)!important;
+}
+
+.sortTableContainer table th, .sortTableContainer table td{
+  padding: 12px 15px 12px 0px;
+}
+
+.sortTableContainer table th span:after, .sortTableContainer table th span:before {
+    border: 0.35em solid transparent;
+    content: "";
+    height: 0;
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: border-color 0.2s ease-in-out;
+    width: 0;
+}
+
+.table>:not(:last-child)>:last-child>*{
+  border-bottom-color: inherit!important;
+}
+
+.btn-close{
+    background: url('./assets/images/Close_white.svg') no-repeat center!important;
+    opacity: 1;
+}

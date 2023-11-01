@@ -3,8 +3,11 @@ import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { MaintenanceComponent } from './pages/maintenance/maintenance.component';
 import { CompanyComponent } from './pages/company/company.component';
-import { FrameworkComponent } from './pages/framework/framework.component';
+import { FrameworkComponent } from './pages/frameworkSetup/framework.component';
 import { UserComponent } from './pages/user/user.component';
+import { FrameworkPageComponent } from './pages/framework-page/framework-page.component';
+import { DomainComponent } from './components/framework-domain/domain/domain.component';
+import { ControlsComponent } from './components/framework-controls/controls/controls.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
@@ -24,6 +27,19 @@ const routes: Routes = [
     path: 'users',
     component: UserComponent,
     data: { breadcrumb: 'User' },
+  },
+  {
+    path: 'frameworks',
+    children: [
+      {
+        path: 'test',
+        component: FrameworkPageComponent,
+      },
+      {
+        path: ':frameworkName', 
+        component: FrameworkPageComponent,
+      },
+    ],
   },
 ];
 

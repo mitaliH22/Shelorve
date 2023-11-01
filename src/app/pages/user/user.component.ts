@@ -6,8 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./user.component.css'],
 })
 export class UserComponent {
-  pageTitle: string = 'Framework Setup';
-  pageIconSrc: string = './assets/maintenance_dark.svg';
+  pageTitle: string = 'User';
+  pageIconSrc: string = './assets/images/maintenance_dark.svg';
 
   onPageChange(page: number): void {
     console.log(`Switched to page ${page}`);

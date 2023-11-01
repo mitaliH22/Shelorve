@@ -1,0 +1,38 @@
+<div class="sortTableContainer">
+  <div class="table-responsive">
+    <table class="table tablesorter tablesorter-default tablesorter5773f95cc940a" style="min-width: 1000px;" role="grid">
+      <thead>
+        <tr role="row" class="tablesorter-headerRow">
+          <th width="13%" scope="col" role="columnheader"><div class="tablesorter-header-inner"><span>Domain Name</span></div></th>
+          <th width="13%" scope="col" role="columnheader"><div class="tablesorter-header-inner"><span>Control Code</span></div></th>
+          <th width="13%" scope="col" role="columnheader"><div class="tablesorter-header-inner"><span>Control Name</span></div></th>
+          <th width="30%" scope="col" role="columnheader"><div class="tablesorter-header-inner"><span>Description</span></div></th>
+          <th width="20%" scope="col" role="columnheader"><div class="tablesorter-header-inner"><span>Reference Link</span></div></th>
+          <th width="11%" scope="col" role="columnheader"><div class="tablesorter-header-inner"><span>Risk Rating</span></div></th>
+        </tr>
+      </thead>
+      <tbody aria-live="polite" aria-relevant="all">
+        <tr *ngFor="let item of tableData" role="row">
+          <td>
+            <span>{{ item.domainName }}</span>
+          </td>
+          <td>
+            <span>{{ item.controlCode }}</span>
+          </td>
+          <td>
+            <span>{{ item.controlName }}</span>
+          </td>
+          <td>
+            <span>{{ item.description }}</span>
+          </td>
+          <td>
+            <a [href]="item.referenceLink" target="_blank">{{ item.referenceLink }}</a>
+          </td>
+          <td class="rating">
+            <span [style.color]="getRiskColor(item.riskRating)">{{ item.riskRating }}</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

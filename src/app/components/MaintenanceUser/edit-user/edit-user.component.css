@@ -1,0 +1,50 @@
+.formContainer {
+    padding: 30px;
+}
+.form-control {
+    font-size: 14px;
+    color: var(--textColor);
+    height: 38px;
+}
+
+input:focus, select:focus, textarea, .form-control {
+    outline: none !important;
+    box-shadow: none !important;
+    border-color: var(--lightGray) !important;
+}
+
+.saveButton {
+    width: 120px;
+    background: var(--orangeColor);
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--whiteColor);
+    display: block;
+    border: none;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+.cancelButton {
+    width: 120px;
+    background: var(--tealColor);
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--whiteColor);
+    display: block;
+    border: none;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+.formContainer label span {
+    color: red;
+}
+.form-select {
+    font-size: 14px;
+    color: var(--textColor);
+}
