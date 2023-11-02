@@ -1,0 +1,38 @@
+<app-admin-layout>
+</app-admin-layout>
+
+<app-modal [modalTitle]="'Add Framework'" [modalId]="'addModalPopup'">
+    <app-maintenance-framework-form></app-maintenance-framework-form>
+</app-modal>
+
+<app-modal [modalTitle]="'Upload Framework'" [modalId]="'uploadFramework'">
+    <form class="formContainer">
+        <div class="mb-3">
+            <label class="filelabel">
+                <img src="./assets/images/upload.png" class="img-fluid">
+                <span class="title">
+                    Upload Framework
+                </span>
+                <input class="FileUpload1" id="FileInput" name="booking_attachment" type="file" required="">
+            </label>
+        </div>
+
+        <div class="d-flex justify-content-end align-items-center" style="gap: 20px;">
+            <input type="button" value="Cancel" class="saveButton" data-bs-dismiss="modal" aria-label="Close">
+            <button type="submit" class="cancelButton">Save</button>
+        </div>
+    </form>
+</app-modal>
+
+<app-modal [modalTitle]="'Edit Framework'" [modalId]="'editFramework'">
+    <app-maintenance-framework-form></app-maintenance-framework-form>
+</app-modal>
+
+
+<div class="contentWrapper">
+    <!-- <app-page-title [breadcrumbText]="pageTitle" [breadcrumbIconSrc]="pageIconSrc"></app-page-title> -->
+    <app-page-header></app-page-header>
+    <app-table></app-table>
+    <app-pagination [resultsPerPage]="10" [totalResults]="20" [currentPage]="1"
+        (pageChange)="onPageChange($event)"></app-pagination>
+</div>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { OperationsService } from 'src/app/services/operations.service';
 
 @Component({
   selector: 'app-table',
@@ -6,6 +7,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./table.component.css'],
 })
 export class TableComponent {
+  constructor(private operation: OperationsService) {}
+
+  ngOnInit() {
+    this.operation.getOperation('/framework').subscribe({
+      next: (data) => {
+        console.log(data);
+      },
+      error: (err) => {
+        console.log(err);
+      },
+    });
+  }
+
   tableData = [
     {
       name: 'Daniel Dsouza',
@@ -14,6 +28,5 @@ export class TableComponent {
       statusImageSrc: './assets/images/status.svg',
       editImageSrc: './assets/images/edit.svg',
     },
-    // Add more data objects here
   ];
 }

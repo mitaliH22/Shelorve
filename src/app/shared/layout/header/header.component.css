@@ -176,6 +176,14 @@ div#navbarNavDropdown {
   header#header {
     display: none;
   }
-
+.navbar-light .navbar-brand{
+    padding: 10px 15px;
+}
+nav{
+  padding-top: 0;
+}
+.nav-item a span{
+    padding: 0 4px;
+}
 }
 

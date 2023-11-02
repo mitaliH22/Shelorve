@@ -1,0 +1,47 @@
+<div class="sortTableContainer projectsPage">
+  <div class="accordion accordion-flush" id="accordionFlushExample">
+    <div class="accordion-item" *ngFor="let assessment of assessments">
+      <div class="itemHead">
+        <ul class="list-unstyled d-flex justify-content-between mb-0">
+          <li class="assessmentId"><b>ID</b><span>:</span>#{{ assessment.id }}</li>
+          <li class="assessmentName"><b>Name</b><span>:</span>{{ assessment.name }}</li>
+          <li class="assessmentStartDate"><b>Start Date</b><span>:</span>{{ assessment.startDate}}</li>
+          <li class="assessmentEndDate"><b>End Date</b><span>:</span>{{ assessment.endDate }}</li>
+          <li class="assessmentStatus"><b>Status</b><span>:</span><img src="./assets/images/status.svg" /></li>
+          <li class="assessmentRating"><b>Overall Risk Rating</b><span>:</span> <span [style.color]="getRiskColor(assessment.rating)" class="ratings">{{ assessment.rating }}</span></li>
+        </ul>
+        <a href="javascript:void(0)" class="accordion-button collapsed" data-bs-toggle="collapse"
+           [attr.data-bs-target]="'#project-' + assessment.id"
+           [attr.aria-controls]="'project-' + assessment.id">
+          View More
+        </a>
+      </div>
+      <div [attr.id]="'project-' + assessment.id" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">
+          <table class="table table-bordered mb-0">
+            <tr>
+              <td><b>Number of Controls</b><span>:</span> 20</td>
+              <td><b>Not Started</b><span>:</span> 05</td>
+            </tr>
+            <tr>
+              <td><b>Compliant</b><span>:</span> 15</td>
+              <td><b>Non-Compliant</b><span>:</span> 08</td>
+            </tr>
+            <tr>
+              <td><b>Evidence Submitted</b><span>:</span> 10</td>
+              <td><b>Evidence Under Review</b><span>:</span> 05</td>
+            </tr>
+            <tr>
+              <td><b>Evidence Approved</b><span>:</span> 05</td>
+              <td><b>Evidence Rejected</b><span>:</span> 05</td>
+            </tr>
+            <tr>
+              <td><b>Risks Identified</b><span>:</span> 08</td>
+              <td><b>Incident Reported</b><span>:</span> 05</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

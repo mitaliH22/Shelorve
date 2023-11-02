@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { OperationsService } from 'src/app/services/operations.service';
 
 @Component({
   selector: 'app-user-list',
@@ -6,6 +7,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./user-list.component.css'],
 })
 export class UserListComponent {
+  constructor(private operation: OperationsService) {}
+
+  ngOnInit() {
+    this.operation.getOperation('/users').subscribe({
+      next: (data) => {
+        console.log(data);
+      },
+      error: (err) => {
+        console.log(err);
+      },
+    });
+  }
+  
   users = [
     {
       name: 'Daniel Dsouza',

@@ -1,24 +1,47 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { MaintenanceComponent } from './pages/maintenance/maintenance.component';
-import { CompanyComponent } from './pages/company/company.component';
-import { FrameworkComponent } from './pages/frameworkSetup/framework.component';
-import { UserComponent } from './pages/user/user.component';
-import { FrameworkPageComponent } from './pages/framework-page/framework-page.component';
+import { CompanyComponent } from './pages/maintenance/company/company.component';
+import { FrameworkComponent } from './pages/maintenance/frameworkSetup/framework.component';
+import { UserComponent } from './pages/maintenance/user/user.component';
+import { FrameworkPageComponent } from './pages/framework/framework-page/framework-page.component';
+import { DomainComponent } from './pages/framework/domain/domain.component';
+import { ControlsComponent } from './pages/framework/controls/controls.component';
+import { AssessmentComponent } from './pages/framework/assessment/assessment.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
   { path: 'dashboard', component: DashboardComponent },
-  { path: 'maintenance', component: MaintenanceComponent },
-  { path: 'company', component: CompanyComponent, data: { breadcrumb: 'Company Setup' } },
-  { path: 'framework', component: FrameworkComponent, data: { breadcrumb: 'Framework Setup' } },
+  {
+    path: 'company',
+    component: CompanyComponent,
+    data: { breadcrumb: 'Company Setup' },
+  },
+  {
+    path: 'framework',
+    component: FrameworkComponent,
+    data: { breadcrumb: 'Framework Setup' },
+  },
   { path: 'users', component: UserComponent, data: { breadcrumb: 'User' } },
   {
-    path: 'frameworks',
+    path: 'frameworks/:slug',
     children: [
-      { path: ':frameworkName', component: FrameworkPageComponent },
+      {
+        path: '',
+        component: DomainComponent,
+      },
+      {
+        path: 'controls',
+        component: ControlsComponent,
+      },
+      {
+        path: 'domain',
+        component: DomainComponent,
+      },
+      {
+        path: 'assessments',
+        component: AssessmentComponent,
+      },
     ],
   },
 ];

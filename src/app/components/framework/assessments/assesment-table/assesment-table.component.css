@@ -1,0 +1,90 @@
+.projectsPage .accordion-item .itemHead {
+    background: var(--lightGrayLight);
+    background: none;
+    padding: 10px 15px;
+}
+.projectsPage .accordion-item {
+    border-bottom: 1px solid var(--lightGray) !important;
+    margin-bottom: 10px;
+}
+.assessmentId {
+    width: 100px;
+}
+
+.projectsPage .accordion-item ul li span {
+    padding: 0px 10px;
+}
+
+.assessmentName {
+    min-width: 220px;
+    display: flex;
+}
+
+.assessmentStartDate {
+    min-width: 163px;
+}
+
+.assessmentEndDate {
+    min-width: 156px;
+}
+
+.assessmentStatus {
+    min-width: 85px;
+}
+
+.assessmentRating {
+    min-width: 194px;
+}
+
+.projectsPage .accordion-item .accordion-button {
+    padding: 0px;
+    width: max-content;
+    font-size: 12px;
+    margin-top: 10px;
+    font-weight: 700;
+    color: var(--textColorLight);
+}
+.projectsPage .accordion-button.collapsed {
+    color: var(--tealColor) !important;
+    background: none;
+}
+.projectsPage .accordion-button::after {
+    width: 12px;
+    height: 12px;
+    margin-left: 10px;
+    background-size: 12px;
+}
+.projectsPage .accordion-body {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.sortTableContainer.projectsPage table td {
+    padding: 8px 15px 8px 15px;
+}
+.sortTableContainer.projectsPage table td b {
+    color: var(--textColorLight);
+}
+.sortTableContainer.projectsPage table td span {
+    padding: 0px 10px;
+}
+.table-bordered>:not(caption)>*>* {
+    border-width: 0 1px!important;
+}
+.table-bordered>:not(caption)>* {
+    border-width: 1px 0;
+}
+table,td{
+    border: 1px solid #dee2e6!important;
+}
+.projectsPage .accordion-item {
+    border-bottom: 1px solid var(--lightGray) !important;
+    margin-bottom: 10px;
+}
+.accordion-button:not(.collapsed){
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+
+.ratings{
+    padding: 0!important;
+}

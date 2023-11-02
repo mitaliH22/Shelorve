@@ -203,3 +203,52 @@ textarea,
     background: url('./assets/images/Close_white.svg') no-repeat center!important;
     opacity: 1;
 }
+
+div#addModalPopup {
+    height: 100vh;
+    overflow-y: auto;
+    border-radius: 0px;
+}
+
+@media only screen and (max-width: 768px){
+.frameworkTabRow {
+    flex-direction: column!important;
+    align-items: flex-start !important;
+}
+.sortTableContainer {
+    padding: 10px 0px!important;
+}
+.projectsPage .accordion-item .itemHead {
+    padding: 10px 0px!important;
+}
+.projectsPage .accordion-item .itemHead ul {
+    flex-direction: column;
+    gap: 0px !important;
+}
+.projectsPage .accordion-body {
+    padding-left: 0px!important;
+    padding-right: 0px!important;
+}
+.sortTableContainer.projectsPage table td {
+    padding: 8px 8px 8px 8px!important;
+    font-size: 12px!important;
+}
+.sortTableContainer.projectsPage table td b {
+    width: 60%!important;
+    display: inline-block!important;
+    padding: 0px !important;
+}
+.container-fluid{
+    padding:0!important;
+}
+.contentWrapper {
+    margin-left: 0!important;
+    padding: 10px 15px 10px 15px!important;
+}
+}
+
+.searchableSelect .dropdown.bootstrap-select .dropdown-menu{
+      width: 100%;
+    height: 100px;
+}
+

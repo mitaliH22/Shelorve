@@ -8,15 +8,14 @@ import { AdminLayoutComponent } from './shared/layout/admin-layout/admin-layout.
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { RouterModule } from '@angular/router';
 import { BreadcrumbComponent } from './shared/breadcrumbs/breadcrumbs.component';
-import { MaintenanceComponent } from './pages/maintenance/maintenance.component';
-import { CompanyComponent } from './pages/company/company.component';
+import { CompanyComponent } from './pages/maintenance/company/company.component';
 import { PageTitleComponent } from './components/page-title/page-title.component';
 import { CompanyFormComponent } from './components/company-form/company-form.component';
-import { FrameworkComponent } from './pages/frameworkSetup/framework.component';
+import { FrameworkComponent } from './pages/maintenance/frameworkSetup/framework.component';
 import { PageHeaderComponent } from './shared/page-header/page-header.component';
 import { TableComponent } from './components/MaintenanceFramework/maintenance-framework-table/table.component';
 import { PaginationComponent } from './shared/pagination/pagination.component';
-import { UserComponent } from './pages/user/user.component';
+import { UserComponent } from './pages/maintenance/user/user.component';
 import { UserListComponent } from './components/MaintenanceUser/user-list/user-list.component';
 import { ModalComponent } from './shared/modal/modal.component';
 import { AddUserFormComponent } from './components/MaintenanceUser/add-form/add-user-form.component';
@@ -26,21 +25,25 @@ import { ResetPwdComponent } from './components/MaintenanceUser/reset-pwd/reset-
 import { EditUserComponent } from './components/MaintenanceUser/edit-user/edit-user.component';
 import { MaintenanceFrameworkFormComponent } from './components/MaintenanceFramework/maintenance-framework-form/maintenance-framework-form.component';
 import { MaintenanceUserFormComponent } from './components/MaintenanceUser/maintenance-user-form/maintenance-user-form.component';
-import { FrameworkPageComponent } from './pages/framework-page/framework-page.component';
-import { FrameworkTabsComponent } from './shared/framework-tabs/framework-tabs.component';
-import { FrameworkTitleComponent } from './shared/framework-title/framework-title.component';
-import { DomainComponent } from './components/framework-domain/domain/domain.component';
-import { ControlsComponent } from './components/framework-controls/controls/controls.component';
-import { AssesmentComponent } from './components/assesment/assesment.component';
-import { FrameworkDomainFormComponent } from './components/framework-domain/framework-domain-form/framework-domain-form.component';
-import { FrameworkDomainEditComponent } from './components/framework-domain/framework-domain-edit/framework-domain-edit.component';
-import { FrameworkDomainUploadComponent } from './components/framework-domain/framework-domain-upload/framework-domain-upload.component';
+import { FrameworkPageComponent } from './pages/framework/framework-page/framework-page.component';
+import { FrameworkTabsComponent } from './shared/framework/framework-tabs/framework-tabs.component';
+import { FrameworkTitleComponent } from './shared/framework/framework-title/framework-title.component';
+import { FrameworkDomainFormComponent } from './components/framework/domain/framework-domain-form/framework-domain-form.component';
+import { FrameworkDomainEditComponent } from './components/framework/domain/framework-domain-edit/framework-domain-edit.component';
 import { UploadFormComponent } from './shared/upload-form/upload-form.component';
-import { FrameworkControlsAddComponent } from './components/framework-controls/framework-controls-add/framework-controls-add.component';
-import { FrameworkControlsFormComponent } from './components/framework-controls-form/framework-controls-form.component';
+import { FrameworkControlsAddComponent } from './components/framework/controls/framework-controls-add/framework-controls-add.component';
+import { FrameworkControlsFormComponent } from './components/framework/domain/framework-controls-form/framework-controls-form.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ActiveRoutePipe } from './active-route.pipe';
-
+import { DomainTableComponent } from './components/framework/domain/domain-table/domain-table.component';
+import { DomainComponent } from './pages/framework/domain/domain.component';
+import { FrameworkHeaderComponent } from './shared/framework/framework-header/framework-header.component';
+import { ControlsTableComponent } from './components/framework/controls/controls-table/controls-table.component';
+import { ControlsComponent } from './pages/framework/controls/controls.component';
+import { AssessmentComponent } from './pages/framework/assessment/assessment.component';
+import { AssesmentTableComponent } from './components/framework/assessments/assesment-table/assesment-table.component';
+import { AssessmentFormComponent } from './components/framework/assessments/assessment-form/assessment-form.component';
+import { ControlFormComponent } from './components/framework/controls/control-form/control-form.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +53,6 @@ import { ActiveRoutePipe } from './active-route.pipe';
     AdminLayoutComponent,
     DashboardComponent,
     BreadcrumbComponent,
-    MaintenanceComponent,
     CompanyComponent,
     PageTitleComponent,
     CompanyFormComponent,
@@ -71,23 +73,28 @@ import { ActiveRoutePipe } from './active-route.pipe';
     FrameworkPageComponent,
     FrameworkTabsComponent,
     FrameworkTitleComponent,
-    DomainComponent,
-    ControlsComponent,
-    AssesmentComponent,
     FrameworkDomainFormComponent,
     FrameworkDomainEditComponent,
-    FrameworkDomainUploadComponent,
     UploadFormComponent,
     FrameworkControlsAddComponent,
     FrameworkControlsFormComponent,
     ActiveRoutePipe,
+    DomainTableComponent,
+    DomainComponent,
+    FrameworkHeaderComponent,
+    ControlsTableComponent,
+    ControlsComponent,
+    AssessmentComponent,
+    AssesmentTableComponent,
+    AssessmentFormComponent,
+    ControlFormComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     RouterModule,
-    RouterModule.forRoot([])
+    RouterModule.forRoot([]),
   ],
   providers: [],
   bootstrap: [AppComponent],
