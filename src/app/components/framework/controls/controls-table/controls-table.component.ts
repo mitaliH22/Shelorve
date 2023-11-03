@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { OperationsService } from 'src/app/services/operations.service';
+import { Component,Input } from '@angular/core';
 
 @Component({
   selector: 'app-controls-table',
@@ -19,19 +18,9 @@ export class ControlsTableComponent {
     },
   ];
 
-  constructor(private operation: OperationsService) {}
-
-  ngOnInit() {
-    this.operation.getOperation('/control').subscribe({
-      next: (data) => {
-        console.log(data);
-      },
-      error: (err) => {
-        console.log(err);
-      },
-    });
-  }
-
+  @Input() controlsList: any;
+  
+  
   getRiskColor(riskRating: string): string {
     if (riskRating === 'Low') {
       return '#2da1ad';

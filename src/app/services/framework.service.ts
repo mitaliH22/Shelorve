@@ -14,4 +14,21 @@ export class FrameworkService {
   getAllFrameworks(): Observable<any> {
     return this.http.get(`${this.apiUrl}/framework`);
   }
+
+  createNewFramework(name: string, comment: string){
+    const body = {
+      frameworksName : name,
+      frameworksDescription : comment
+    }
+    return this.http.post(`${this.apiUrl}/framework`,body);
+  }
+
+  editFramework(id: any,name: string, comment: string){
+    const body = {
+      frameworksID:id,
+      frameworksName : name,
+      frameworksDescription : comment
+    }
+    return this.http.put(`${this.apiUrl}/framework`,body)
+  }
 }

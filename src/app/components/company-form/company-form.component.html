@@ -1,74 +1,82 @@
-<form class="formContainer">
-                <div class="row">
-                    <div class="col-md-6 mb-3 position-relative">
-                        <label class="form-label">Company ID</label>
-                        <input type="text" value="CP-108564" class="form-control" readonly disabled />
-                    </div>
+<form class="formContainer" [formGroup]="companyForm" (ngSubmit)="onSubmit($event)">
+    <div class="row">
+        <div class="col-md-6 mb-3 position-relative">
+            <label class="form-label">Company ID</label>
+            <input type="text" value="CP-108564" class="form-control" readonly disabled />
+        </div>
 
-                    <div class="col-md-6 mb-3 position-relative">
-                        <label class="form-label">Company Name<span>*</span></label>
-                        <input type="text" class="form-control" required />
-                        <img src="./assets/images/companyName.svg" class="inputIcon" />
-                    </div>
+        <div class="col-md-6 mb-3 position-relative">
+            <label class="form-label">Company Name<span>*</span></label>
+            <input type="text" class="form-control" formControlName="companyName" required />
+            <img src="./assets/images/companyName.svg" class="inputIcon" />
+        </div>
 
-                    <div class="col-md-6 mb-3 position-relative">
-                        <label class="form-label">Email<span>*</span></label>
-                        <input type="text" class="form-control" required />
-                        <img src="./assets/images/formEmail.png" class="inputIcon" />
-                    </div>
+        <div class="col-md-6 mb-3 position-relative">
+            <label class="form-label">Email<span>*</span></label>
+            <input type="text" class="form-control" formControlName="email" required />
+            <img src="./assets/images/formEmail.png" class="inputIcon" />
+        </div>
 
-                    <div class="col-md-6 mb-3 position-relative">
-                        <label class="form-label">Phone<span>*</span></label>
-                        <input type="tel" id="phone" class="form-control" required />
-                        <img src="./assets/images/formCall.svg" class="inputIcon" />
-                    </div>
+        <div class="col-md-6 mb-3 position-relative">
+            <label class="form-label">Phone<span>*</span></label>
+            <div>
+                <ngx-intl-tel-input [cssClass]="'form-control w-100'" [preferredCountries]="preferredCountries"
+                    [enableAutoCountrySelect]="true" [enablePlaceholder]="true" [searchCountryFlag]="true"
+                    [searchCountryField]="[
+                            SearchCountryField.Iso2,
+                            SearchCountryField.Name
+                          ]" [selectFirstCountry]="false" [selectedCountryISO]="CountryISO.India" [maxLength]="15"
+                    [phoneValidation]="true" [separateDialCode]="separateDialCode"
+                    [numberFormat]="PhoneNumberFormat.National" formControlName="phone" name="phone">
+                </ngx-intl-tel-input>
+            </div>
+            <img src="./assets/images/formCall.svg" class="inputIcon" />
+        </div>
+        <div class="col-md-12 mb-3 position-relative">
+            <label class="form-label">Address 1<span>*</span></label>
+            <input type="text" class="form-control" formControlName="address1" required />
+            <img src="./assets/images/formMap.svg" class="inputIcon" />
+        </div>
 
-                    <div class="col-md-12 mb-3 position-relative">
-                        <label class="form-label">Address 1<span>*</span></label>
-                        <input type="text" class="form-control" required />
-                        <img src="./assets/images/formMap.svg" class="inputIcon" />
-                    </div>
+        <div class="col-md-12 mb-3 position-relative">
+            <label class="form-label">Address 2<span>*</span></label>
+            <input type="text" class="form-control" formControlName="address2" required />
+            <img src="./assets/images/formMap.svg" class="inputIcon" />
+        </div>
 
-                    <div class="col-md-12 mb-3 position-relative">
-                        <label class="form-label">Address 2<span>*</span></label>
-                        <input type="text" class="form-control" required />
-                        <img src="./assets/images/formMap.svg" class="inputIcon" />
-                    </div>
+        <div class="col-md-3 mb-3">
+            <label class="form-label">City<span>*</span></label>
+            <select class="form-select" formControlName="city" required>
+                <option selected disabled value="">Choose City...</option>
+                <option>...</option>
+            </select>
+        </div>
 
-                    <div class="col-md-3 mb-3">
-                        <label class="form-label">City<span>*</span></label>
-                        <select class="form-select" id="validationCustom04" required>
-                            <option selected disabled value="">Choose City...</option>
-                            <option>...</option>
-                        </select>
-                    </div>
+        <div class="col-md-3 mb-3">
+            <label class="form-label">State<span>*</span></label>
+            <select class="form-select" formControlName="state" required>
+                <option selected disabled value="">Choose State...</option>
+                <option>...</option>
+            </select>
+        </div>
 
-                    <div class="col-md-3 mb-3">
-                        <label class="form-label">State<span>*</span></label>
-                        <select class="form-select" id="validationCustom04" required>
-                            <option selected disabled value="">Choose State...</option>
-                            <option>...</option>
-                        </select>
-                    </div>
+        <div class="col-md-3 mb-3">
+            <label class="form-label">Country<span>*</span></label>
+            <select class="form-select" formControlName="country" required>
+                <option selected disabled value="">Choose Country...</option>
+                <option>...</option>
+            </select>
+        </div>
 
-                    <div class="col-md-3 mb-3">
-                        <label class="form-label">Country<span>*</span></label>
-                        <select class="form-select" id="validationCustom04" required>
-                            <option selected disabled value="">Choose Country...</option>
-                            <option>...</option>
-                        </select>
-                    </div>
+        <div class="col-md-3 mb-3 position-relative">
+            <label class="form-label">Zip Code<span>*</span></label>
+            <input type="text" class="form-control" formControlName="zipCode" required />
+            <img src="./assets/images/formZip.svg" class="inputIcon" />
+        </div>
 
-                    <div class="col-md-3 mb-3 position-relative">
-                        <label class="form-label">Zip Code<span>*</span></label>
-                        <input type="text" class="form-control" required />
-                        <img src="./assets/images/formZip.svg" class="inputIcon" />
-                    </div>
-
-                    <div class="d-flex justify-content-end align-items-center mt-4" style="gap: 20px;">
-                        <input type="button" value="Cancel" class="saveButton" data-bs-dismiss="modal"
-                            aria-label="Close">
-                        <button type="submit" class="cancelButton">Save</button>
-                    </div>
-                </div>
-            </form>
+        <div class="d-flex justify-content-end align-items-center mt-4" style="gap: 20px;">
+            <input type="button" value="Cancel" class="saveButton" data-bs-dismiss="modal" aria-label="Close">
+            <button type="submit" class="cancelButton">Save</button>
+        </div>
+    </div>
+</form>

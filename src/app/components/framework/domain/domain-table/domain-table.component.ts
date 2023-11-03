@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { OperationsService } from 'src/app/services/operations.service';
+import { Component,Input } from '@angular/core';
+
 
 @Component({
   selector: 'app-domain-table',
@@ -7,20 +7,7 @@ import { OperationsService } from 'src/app/services/operations.service';
   styleUrls: ['./domain-table.component.css'],
 })
 export class DomainTableComponent {
-
-  constructor(private operations: OperationsService) { }
-  
-  ngOnInit() {
-    this.operations.getOperation('/domain').subscribe({
-      next: (data) => {
-        console.log(data);
-      },
-      error: (err) => {
-        console.log(err);
-      }
-    })
-  }
-
+  @Input() domainList: any;
   tableData: any[] = [
     {
       name: 'TATA Indicom',

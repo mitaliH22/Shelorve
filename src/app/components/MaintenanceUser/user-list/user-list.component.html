@@ -13,7 +13,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let user of users">
+        <tr *ngFor="let user of userList">
           <td>
             <span class="orangeColor">{{ user.name }}</span>
           </td>
@@ -21,24 +21,24 @@
             <span class="orangeColor">{{ user.email }}</span>
           </td>
           <td>
-            <span class="orangeColor">{{ user.role }}</span>
+            <span class="orangeColor">{{ user.userRole }}</span>
           </td>
           <td>
             <span class="orangeColor">{{ user.department }}</span>
           </td>
           <td>
-            {{ user.password }}
+            {{ user.userpass }}
           </td>
           <td style="text-align: center;">
             <img src="./assets/images/status.svg" class="img-fluid">
           </td>
           <td>
             <div class="d-flex align-items-center" style="gap: 10px;">
-             <app-edit-user></app-edit-user>
+              <app-edit-user></app-edit-user>
               <a href="javascript:void(0)">
                 <img src="./assets/images/delete.png" class="img-fluid">
               </a>
-                <app-reset-pwd></app-reset-pwd>
+              <app-reset-pwd></app-reset-pwd>
             </div>
           </td>
         </tr>

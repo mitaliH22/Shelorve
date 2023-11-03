@@ -39,18 +39,18 @@
         </tr>
       </thead>
       <tbody aria-live="polite" aria-relevant="all">
-        <tr *ngFor="let item of tableData" role="row">
+        <tr *ngFor="let item of domainList" role="row">
           <td data-label="Name">
-            <span class="orangeColor">{{ item.name }}</span>
+            <span class="orangeColor">{{ item.domainName }}</span>
           </td>
           <td data-label="Grid">
-            {{ item.description }}
+            {{ item.domainDescription }}
           </td>
           <td data-label="Type">
-            {{ item.domainManager }}
+            {{ item.domainManagerName }}
           </td>
           <td data-label="Region">
-            {{ item.email }}
+            {{ item.domainManagerEmail }}
           </td>
           <td data-label="Chickens" style="text-align: center;">
             <img [src]="item.status" class="img-fluid">

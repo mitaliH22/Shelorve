@@ -12,7 +12,7 @@
         </tr>
       </thead>
       <tbody aria-live="polite" aria-relevant="all">
-        <tr *ngFor="let item of tableData" role="row">
+        <tr *ngFor="let item of controlsList" role="row">
           <td>
             <span>{{ item.domainName }}</span>
           </td>
@@ -23,7 +23,7 @@
             <span>{{ item.controlName }}</span>
           </td>
           <td>
-            <span>{{ item.description }}</span>
+            <span>{{ item.controlDescription }}</span>
           </td>
           <td>
             <a [href]="item.referenceLink" target="_blank">{{ item.referenceLink }}</a>

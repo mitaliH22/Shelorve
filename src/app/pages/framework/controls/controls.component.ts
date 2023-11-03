@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { OperationsService } from 'src/app/services/operations.service';
 
 @Component({
   selector: 'app-controls',
@@ -6,7 +7,36 @@ import { Component } from '@angular/core';
   styleUrls: ['./controls.component.css'],
 })
 export class ControlsComponent {
+  controlsList: any = [];
+  totalResults: number = 0;
+  resultsPerPage: number = 10;
+  currentPage: number = 1;
+  selectedFile: any;
+
+  constructor(private operation: OperationsService) {}
+
+  ngOnInit() {
+    this.operation.getOperation('/control').subscribe({
+      next: (data) => {
+        this.controlsList = data;
+        this.totalResults = this.controlsList?.length || 0;
+      },
+      error: (err) => {
+        console.log(err);
+      },
+    });
+  }
+
+  get pageCount(): number {
+    return Math.max(1, Math.ceil(this.totalResults / this.resultsPerPage));
+  }
+
   onPageChange(page: number): void {
     console.log(`Switched to page ${page}`);
+  }
+
+
+  onFileSelected(event: any): void {
+    this.selectedFile = event.target?.files[0]?.name;
   }
 }

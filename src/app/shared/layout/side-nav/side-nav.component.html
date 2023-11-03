@@ -1,57 +1,61 @@
-<div id="leftPart" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()" [class.toggleSlide]="isHovered" >
-            <ul class="list-unstyled leftMenu" id="accordionExample">
-                <li class="meinMenu " [class.menuActive]="'/dashboard' | activeRoute" >
-                    <a href="" routerLink="/dashboard" class="leftMenuItem">
-                        <div class="menuImageContainer">
-                            <img src="./assets/images/Dashboard_white.svg" alt="dashboard" class="iconWhite" />
-                            <img src="./assets/images/Dashboard_teal.svg" alt="dashboard" class="iconTeal" />
-                        </div>
-                        <span>Dashboard</span>
-                    </a>
-                </li>
-                <li class="meinMenu accordion-item " [class.menuActive]="menuItems | activeRoute">
-                    <a href="javascript:void(0)" class="leftMenuItem " [class]="{'collapsed': !(menuItems | activeRoute)}" data-bs-toggle="collapse"
-                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        <div class="menuImageContainer">
-                            <img src="./assets/images/framwork_white.svg" alt="dashboard" class="iconWhite" />
-                            <img src="./assets/images/framwork_teal.svg" alt="dashboard" class="iconTeal" />
-                        </div>
-                        <span>Framework</span>
-                    </a>
+<div id="leftPart" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()" [class.toggleSlide]="isHovered">
+    <ul class="list-unstyled leftMenu" id="accordionExample">
+        <li class="meinMenu " [class.menuActive]="'/dashboard' | activeRoute">
+            <a href="" routerLink="/dashboard" class="leftMenuItem">
+                <div class="menuImageContainer">
+                    <img src="./assets/images/Dashboard_white.svg" alt="dashboard" class="iconWhite" />
+                    <img src="./assets/images/Dashboard_teal.svg" alt="dashboard" class="iconTeal" />
+                </div>
+                <span>Dashboard</span>
+            </a>
+        </li>
+        <li class="meinMenu accordion-item " [class.menuActive]="menuItems | activeRoute">
+            <a href="javascript:void(0)" class="leftMenuItem " [class]="{'collapsed': !(menuItems | activeRoute)}"
+                data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+                aria-controls="collapseOne">
+                <div class="menuImageContainer">
+                    <img src="./assets/images/framwork_white.svg" alt="dashboard" class="iconWhite" />
+                    <img src="./assets/images/framwork_teal.svg" alt="dashboard" class="iconTeal" />
+                </div>
+                <span>Framework</span>
+            </a>
 
-                    <div id="collapseOne" [class]="{'show': (menuItems | activeRoute)}" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                        <ul class="list-unstyled subMenu">
-                                <li *ngFor="let menuItem of menuItems">
-                                <a [class.activeIcon]="menuItem.link | activeRoute" [href]="menuItem.link">
-                                    <span class="menuLeftCircle"></span>
-                                    <span>{{ menuItem.label }}</span>
-                                </a>
-                                </li>
-                        </ul>
-                    </div>
-                </li>
-                <li class="meinMenu accordion-item" [class.menuActive]="submenuItems | activeRoute">
-                    <a href="" [class]="{'collapsed': !(menuItems | activeRoute)}" class="leftMenuItem" data-bs-toggle="collapse"
-                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        <div class="menuImageContainer">
-                            <img src="./assets/images/maintenance.svg" alt="dashboard" class="iconWhite" />
-                            <img src="./assets/images/maintenance_teal.svg" alt="dashboard" class="iconTeal" />
-                        </div>
-                        <span>Maintenance</span>
-                    </a>
-                    <div [class]="{'show': (submenuItems | activeRoute)}" id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                        <ul class="list-unstyled subMenu">
-                            <li *ngFor="let submenuItem of submenuItems">
-                              <a [routerLink]="submenuItem.link" [class.activeIcon]="submenuItem.link | activeRoute">
-                                <span class="menuLeftCircle"></span>
-                                <span>{{ submenuItem.label }}</span>
-                              </a>
-                            </li>
-                          </ul>
-                          
-                    </div>
-                </li>
-                <!-- <li class="meinMenu">
+            <div id="collapseOne" [class]="{'show': (menuItems | activeRoute)}" class="accordion-collapse collapse"
+                data-bs-parent="#accordionExample">
+                <ul class="list-unstyled subMenu">
+                    <li *ngFor="let menuItem of menuItems">
+                        <a [class.activeIcon]="menuItem.link | activeRoute" [href]="menuItem.link">
+                            <span class="menuLeftCircle"></span>
+                            <span>{{ menuItem.label }}</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li class="meinMenu accordion-item" [class.menuActive]="submenuItems | activeRoute">
+            <a href="" [class]="{'collapsed': !(menuItems | activeRoute)}" class="leftMenuItem"
+                data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                aria-controls="collapseTwo">
+                <div class="menuImageContainer">
+                    <img src="./assets/images/maintenance.svg" alt="dashboard" class="iconWhite" />
+                    <img src="./assets/images/maintenance_teal.svg" alt="dashboard" class="iconTeal" />
+                </div>
+                <span>Maintenance</span>
+            </a>
+            <div [class]="{'show': (submenuItems | activeRoute)}" id="collapseTwo" class="accordion-collapse collapse"
+                data-bs-parent="#accordionExample">
+                <ul class="list-unstyled subMenu">
+                    <li *ngFor="let submenuItem of submenuItems">
+                        <a [routerLink]="submenuItem.link" [class.activeIcon]="submenuItem.link | activeRoute">
+                            <span class="menuLeftCircle"></span>
+                            <span>{{ submenuItem.label }}</span>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </li>
+        <!-- <li class="meinMenu">
                     <a href="#" class="leftMenuItem">
                         <div class="menuImageContainer">
                             <img src="./assets/images/user_white.svg" alt="dashboard" class="iconWhite" />
@@ -60,26 +64,26 @@
                         <span>User</span>
                     </a>
                 </li> -->
-                <li class="meinMenu" [class.menuActive]="'/settings' | activeRoute">
-                    <a href="javascript:void(0)" class="leftMenuItem">
-                        <div class="menuImageContainer">
-                            <img src="./assets/images/settings_white.svg" alt="dashboard" class="iconWhite" />
-                            <img src="./assets/images/settings_teal.svg" alt="dashboard" class="iconTeal" />
-                        </div>
-                        <span>Setting</span>
-                    </a>
-                </li>
+        <li class="meinMenu" [class.menuActive]="'/settings' | activeRoute">
+            <a href="javascript:void(0)" class="leftMenuItem">
+                <div class="menuImageContainer">
+                    <img src="./assets/images/settings_white.svg" alt="dashboard" class="iconWhite" />
+                    <img src="./assets/images/settings_teal.svg" alt="dashboard" class="iconTeal" />
+                </div>
+                <span>Setting</span>
+            </a>
+        </li>
 
-                <li class="logout">
-                    <a href="javascript:void(0)" class="leftMenuItem">
-                        <div class="menuImageContainer">
-                            <img src="./assets/images/logout.svg" alt="dashboard" class="iconWhite" />
-                            <img src="./assets/images/logout.svg" alt="dashboard" class="iconTeal" />
-                        </div>
-                        <span>Logout</span>
-                    </a>
-                </li>
-            </ul>
+        <li class="logout">
+            <a href="javascript:void(0)" class="leftMenuItem">
+                <div class="menuImageContainer">
+                    <img src="./assets/images/logout.svg" alt="dashboard" class="iconWhite" />
+                    <img src="./assets/images/logout.svg" alt="dashboard" class="iconTeal" />
+                </div>
+                <span>Logout</span>
+            </a>
+        </li>
+    </ul>
 
 
-        </div>
+</div>

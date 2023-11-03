@@ -44,6 +44,10 @@ import { AssessmentComponent } from './pages/framework/assessment/assessment.com
 import { AssesmentTableComponent } from './components/framework/assessments/assesment-table/assesment-table.component';
 import { AssessmentFormComponent } from './components/framework/assessments/assessment-form/assessment-form.component';
 import { ControlFormComponent } from './components/framework/controls/control-form/control-form.component';
+import { NgxIntlTelInputModule } from '@khazii/ngx-intl-tel-input';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { Select2Component } from './shared/select2/select2.component';
 
 @NgModule({
   declarations: [
@@ -88,10 +92,15 @@ import { ControlFormComponent } from './components/framework/controls/control-fo
     AssesmentTableComponent,
     AssessmentFormComponent,
     ControlFormComponent,
+    Select2Component,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    NgxIntlTelInputModule,
+    BrowserAnimationsModule,
     HttpClientModule,
     RouterModule,
     RouterModule.forRoot([]),

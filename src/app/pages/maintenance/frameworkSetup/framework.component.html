@@ -11,9 +11,9 @@
             <label class="filelabel">
                 <img src="./assets/images/upload.png" class="img-fluid">
                 <span class="title">
-                    Upload Framework
+                    {{selectedFile ? selectedFile : 'Upload'}}
                 </span>
-                <input class="FileUpload1" id="FileInput" name="booking_attachment" type="file" required="">
+                <input  (change)="onFileSelected($event)" class="FileUpload1" id="FileInput" name="booking_attachment" type="file" required="">
             </label>
         </div>
 
@@ -25,14 +25,14 @@
 </app-modal>
 
 <app-modal [modalTitle]="'Edit Framework'" [modalId]="'editFramework'">
-    <app-maintenance-framework-form></app-maintenance-framework-form>
+    <app-maintenance-framework-form [FormData]="formData"></app-maintenance-framework-form>
 </app-modal>
 
 
 <div class="contentWrapper">
     <!-- <app-page-title [breadcrumbText]="pageTitle" [breadcrumbIconSrc]="pageIconSrc"></app-page-title> -->
-    <app-page-header></app-page-header>
-    <app-table></app-table>
-    <app-pagination [resultsPerPage]="10" [totalResults]="20" [currentPage]="1"
+    <app-page-header ></app-page-header>
+    <app-table [frameworkList]="frameworkList" (onEdit)="editData($event)"></app-table>
+    <app-pagination [resultsPerPage]="resultsPerPage" [totalResults]="totalResults" [currentPage]="currentPage"
         (pageChange)="onPageChange($event)"></app-pagination>
 </div>

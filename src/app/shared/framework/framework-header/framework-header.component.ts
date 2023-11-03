@@ -14,9 +14,6 @@ export class FrameworkHeaderComponent {
       const assessmentRoute = 'assessments';
       const currentRoute = segments.map((segment) => segment.path).join('/');
 
-      console.log('Current Route:', currentRoute);
-      console.log('Assessment Route:', assessmentRoute);
-
       if (currentRoute.endsWith(assessmentRoute)) {
         this.showUploadFramework = false;
       }

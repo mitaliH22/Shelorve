@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { OperationsService } from 'src/app/services/operations.service';
+import { Component,Input } from '@angular/core';
 
 @Component({
   selector: 'app-user-list',
@@ -7,18 +6,7 @@ import { OperationsService } from 'src/app/services/operations.service';
   styleUrls: ['./user-list.component.css'],
 })
 export class UserListComponent {
-  constructor(private operation: OperationsService) {}
-
-  ngOnInit() {
-    this.operation.getOperation('/users').subscribe({
-      next: (data) => {
-        console.log(data);
-      },
-      error: (err) => {
-        console.log(err);
-      },
-    });
-  }
+  @Input() userList: any;
   
   users = [
     {

@@ -21,13 +21,9 @@ export class SideNavComponent {
   ) {
   }
 
-  menuItems: any[] = [
-    { link: '/frameworks/test1', label: 'Test 1' },
-    { link: '/frameworks/test2', label: 'Test 2' },
-    { link: '/frameworks/test3', label: 'Test 3' },
-  ];
+  menuItems!: any[];
 
-  submenuItems:{ link: string; label: string }[] = [
+  submenuItems: { link: string; label: string }[] = [
     { link: '/company', label: 'Company Setup' },
     { link: '/framework', label: 'Framework Setup' },
     { link: '/users', label: 'User' }
@@ -35,17 +31,17 @@ export class SideNavComponent {
 
   ngOnInit(): void {
     this.frameworkService?.getAllFrameworks()?.subscribe((data: any) => {
-      // this.menuItems = data.map((item: Framework) => {
-      //   return {
-      //     id: item.frameworksID,
-      //     link: `/frameworks/${item.frameworksName}`,
-      //     label: item.frameworksDescription
-      //   };
-      // });
+      this.menuItems = data.map((item: Framework) => {
+        return {
+          id: item.frameworksID,
+          link: `/frameworks/${item.frameworksName}`,
+          label: item.frameworksDescription
+        };
+      });
 
     });
   }
-  
+
   onMouseEnter() {
     this.isHovered = true;
     document.body.classList.add('effectMenu');

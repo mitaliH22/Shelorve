@@ -3,7 +3,7 @@
 
 <!-- Add Controls Popup -->
 <app-modal [modalTitle]="'Add  Controls'" [modalId]="'addModalPopup'">
-<app-control-form></app-control-form>
+    <app-control-form></app-control-form>
 </app-modal>
 
 <!-- Upload Controls Popup -->
@@ -13,9 +13,10 @@
             <label class="filelabel">
                 <img src="./assets/images/upload.png" class="img-fluid">
                 <span class="title">
-                    Upload Controls
+                    {{selectedFile ? selectedFile : 'Upload Controls'}}
                 </span>
-                <input class="FileUpload1" id="FileInput" name="booking_attachment" type="file" required="">
+                <input class="FileUpload1" id="FileInput" name="booking_attachment" type="file" required=""
+                    (change)="onFileSelected($event)">
             </label>
         </div>
 
@@ -30,11 +31,7 @@
 <div class="contentWrapper">
     <app-framework-title></app-framework-title>
     <app-framework-header></app-framework-header>
-    <app-controls-table></app-controls-table>
-        <app-pagination
-  [resultsPerPage]="10"
-  [totalResults]="20"
-  [currentPage]="1"
-  (pageChange)="onPageChange($event)"
-></app-pagination>
+    <app-controls-table [controlsList]="controlsList"></app-controls-table>
+    <app-pagination [resultsPerPage]="resultsPerPage" [totalResults]="totalResults" [currentPage]="currentPage"
+        (pageChange)="onPageChange($event)"></app-pagination>
 </div>

@@ -1,0 +1,61 @@
+.formContainer {
+    padding: 30px;
+}
+
+.filelabel {
+    width: 100%;
+    border: 2px dashed grey;
+    border-radius: 5px;
+    display: block;
+    padding: 5px;
+    transition: border 300ms ease;
+    cursor: pointer;
+    text-align: center;
+    margin: 0;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.filelabel img, .filelabel .title {
+    color: grey;
+    transition: 200ms color;
+}
+
+.filelabel img {
+    display: block;
+    width: 50px;
+    padding-bottom: 5px;
+    margin: auto;
+}
+
+#FileInput {
+    display: none;
+}
+
+
+.cancelButton {
+  width: 120px;
+  background: var(--tealColor);
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--whiteColor);
+  display: block;
+  border: none;
+  border-radius: 5px;
+  font-weight: 500;
+}
+.saveButton {
+  width: 120px;
+  background: var(--orangeColor);
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--whiteColor);
+  display: block;
+  border: none;
+  border-radius: 5px;
+  font-weight: 500;
+}

@@ -1,76 +1,77 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
-  --themeColor: #311154;
-  --tealColor: #2da1ad;
-  --hoverColor: #4d2776;
-  --textColor: #263959;
-  --textColorLight: #65758f;
-  --lightGray: #e7ebf3;
-  --lightGrayLight: #e7ebf380;
-  --orangeColor: #f28e00;
-  --greenColor: #60a12c;
-  --whiteColor: #ffffff;
-  --themeFont: "Roboto", sans-serif;
-  --circle: 50%;
+    --themeColor: #311154;
+    --tealColor: #2da1ad;
+    --hoverColor: #4d2776;
+    --textColor: #263959;
+    --textColorLight: #65758f;
+    --lightGray: #e7ebf3;
+    --lightGrayLight: #e7ebf380;
+    --orangeColor: #f28e00;
+    --greenColor: #60a12c;
+    --whiteColor: #ffffff;
+    --themeFont: "Roboto", sans-serif;
+    --circle: 50%;
 }
 
 body {
-  font-family: var(--themeFont);
-  font-size: 14px;
-  color: var(--textColor);
-  overflow-x: hidden;
+    font-family: var(--themeFont);
+    font-size: 14px;
+    color: var(--textColor);
+    overflow-x: hidden;
 }
 
 a {
-  color: var(--textColor);
-  text-decoration: none;
+    color: var(--textColor);
+    text-decoration: none;
 }
 
 input:focus,
 select:focus,
 textarea,
 .form-control {
-  outline: none !important;
-  box-shadow: none !important;
-  border-color: var(--lightGray) !important;
+    outline: none !important;
+    box-shadow: none !important;
+    border-color: var(--lightGray) !important;
 }
 
 .dropdown-item {
-  font-size: 14px;
-  color: var(--textColor);
+    font-size: 14px;
+    color: var(--textColor);
 }
 
 .dropdown-item img {
-  width: 16px;
+    width: 16px;
 }
 
 .dropdown-item.active,
 .dropdown-item:active {
-  color: var(--textColor);
-  background-color: #f4f5f7;
+    color: var(--textColor);
+    background-color: #f4f5f7;
 }
 
-.form-control{
-  border-radius: 0.375rem;
+.form-control {
+    border-radius: 0.375rem;
 }
 
-@media only screen and (max-width: 768px){
-.offcanvas-end {
-    width: 300px!important;
-}
-.formContainer {
-    padding: 10px 15px!important;
-}
+@media only screen and (max-width: 768px) {
+    .offcanvas-end {
+        width: 300px !important;
+    }
+
+    .formContainer {
+        padding: 10px 15px !important;
+    }
 }
 
 
 .effectMenu .contentWrapper {
-  margin-left: 240px!important;
-  transition: all 0.5s ease-in-out!important;
+    margin-left: 240px !important;
+    transition: all 0.5s ease-in-out !important;
 }
 
 .selected {
-  background-color: #4d2776!important;
+    background-color: #4d2776 !important;
 }
 
 .sortTableContainer {
@@ -88,6 +89,7 @@ textarea,
     background: none;
     padding: 10px 15px;
 }
+
 .assessmentId {
     width: 100px;
 }
@@ -134,6 +136,7 @@ textarea,
 .assessmentStatus {
     min-width: 85px;
 }
+
 .assessmentRating {
     min-width: 194px;
 }
@@ -155,15 +158,15 @@ textarea,
 }
 
 .sortTableContainer table th span:before {
-    border-bottom-color: rgba(0, 0, 0, 0.25)!important;
-    border-top: 0!important;
-    margin-top: -2px!important;
+    border-bottom-color: rgba(0, 0, 0, 0.25) !important;
+    border-top: 0 !important;
+    margin-top: -2px !important;
 }
 
 .sortTableContainer table th span:after {
-    border-bottom: 0!important;
-    border-top-color: rgba(0, 0, 0, 0.25)!important;
-    margin-top: 0.35em!important;
+    border-bottom: 0 !important;
+    border-top-color: rgba(0, 0, 0, 0.25) !important;
+    margin-top: 0.35em !important;
 }
 
 .sortTableContainer table th {
@@ -171,19 +174,23 @@ textarea,
     font-weight: 400;
 }
 
-.sortTableContainer table th span:hover:before, .sortTableContainer table th span:focus:before {
-    border-bottom-color: rgba(0, 0, 0, 0.75)!important;
+.sortTableContainer table th span:hover:before,
+.sortTableContainer table th span:focus:before {
+    border-bottom-color: rgba(0, 0, 0, 0.75) !important;
 }
 
-.sortTableContainer table th span:hover:after, .sortTableContainer table th span:focus:after {
-    border-top-color: rgba(0, 0, 0, 0.75)!important;
+.sortTableContainer table th span:hover:after,
+.sortTableContainer table th span:focus:after {
+    border-top-color: rgba(0, 0, 0, 0.75) !important;
 }
 
-.sortTableContainer table th, .sortTableContainer table td{
-  padding: 12px 15px 12px 0px;
+.sortTableContainer table th,
+.sortTableContainer table td {
+    padding: 12px 15px 12px 0px;
 }
 
-.sortTableContainer table th span:after, .sortTableContainer table th span:before {
+.sortTableContainer table th span:after,
+.sortTableContainer table th span:before {
     border: 0.35em solid transparent;
     content: "";
     height: 0;
@@ -195,12 +202,12 @@ textarea,
     width: 0;
 }
 
-.table>:not(:last-child)>:last-child>*{
-  border-bottom-color: inherit!important;
+.table>:not(:last-child)>:last-child>* {
+    border-bottom-color: inherit !important;
 }
 
-.btn-close{
-    background: url('./assets/images/Close_white.svg') no-repeat center!important;
+.btn-close {
+    background: url('./assets/images/Close_white.svg') no-repeat center !important;
     opacity: 1;
 }
 
@@ -210,45 +217,99 @@ div#addModalPopup {
     border-radius: 0px;
 }
 
-@media only screen and (max-width: 768px){
-.frameworkTabRow {
-    flex-direction: column!important;
-    align-items: flex-start !important;
-}
-.sortTableContainer {
-    padding: 10px 0px!important;
-}
-.projectsPage .accordion-item .itemHead {
-    padding: 10px 0px!important;
-}
-.projectsPage .accordion-item .itemHead ul {
-    flex-direction: column;
-    gap: 0px !important;
-}
-.projectsPage .accordion-body {
-    padding-left: 0px!important;
-    padding-right: 0px!important;
-}
-.sortTableContainer.projectsPage table td {
-    padding: 8px 8px 8px 8px!important;
-    font-size: 12px!important;
-}
-.sortTableContainer.projectsPage table td b {
-    width: 60%!important;
-    display: inline-block!important;
-    padding: 0px !important;
-}
-.container-fluid{
-    padding:0!important;
-}
-.contentWrapper {
-    margin-left: 0!important;
-    padding: 10px 15px 10px 15px!important;
-}
+@media only screen and (max-width: 768px) {
+    .frameworkTabRow {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+    }
+
+    .sortTableContainer {
+        padding: 10px 0px !important;
+    }
+
+    .projectsPage .accordion-item .itemHead {
+        padding: 10px 0px !important;
+    }
+
+    .projectsPage .accordion-item .itemHead ul {
+        flex-direction: column;
+        gap: 0px !important;
+    }
+
+    .projectsPage .accordion-body {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+
+    .sortTableContainer.projectsPage table td {
+        padding: 8px 8px 8px 8px !important;
+        font-size: 12px !important;
+    }
+
+    .sortTableContainer.projectsPage table td b {
+        width: 60% !important;
+        display: inline-block !important;
+        padding: 0px !important;
+    }
+
+    .container-fluid {
+        padding: 0 !important;
+    }
+
+    .contentWrapper {
+        margin-left: 0 !important;
+        padding: 10px 15px 10px 15px !important;
+    }
 }
 
-.searchableSelect .dropdown.bootstrap-select .dropdown-menu{
-      width: 100%;
+.searchableSelect .dropdown.bootstrap-select .dropdown-menu {
+    width: 100%;
     height: 100px;
 }
 
+.iti {
+    width: 100% !important;
+}
+
+.select2-container {
+    width: 100% !important;
+    background: #fff !important;
+
+}
+
+.select2-container--default .select2-selection--single {
+    border-color: #dee2e6 !important;
+    height: 34px !important;
+    font-size: 14px !important;
+    color: var(--textColor) !important;
+    padding: .375rem 2.25rem .375rem .75rem !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: var(--textColor) !important;
+    line-height: 21px !important;
+    padding: 0 !important;
+}
+
+/* Left Menu Scroll CSS */
+
+.leftMenu {
+    max-height: 68vh;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.leftMenu::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px #240941;
+    background-color: #240941;
+}
+
+.leftMenu::-webkit-scrollbar {
+    width: 2px;
+    background-color: #240941;
+}
+
+.leftMenu::-webkit-scrollbar-thumb {
+    background-color: #240941;
+    border: 2px solid #240941;
+}

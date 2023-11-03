@@ -1,24 +1,15 @@
-import { Component } from '@angular/core';
-import { OperationsService } from 'src/app/services/operations.service';
+import { AfterViewInit, Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
+declare var $: any;
 
 @Component({
   selector: 'app-table',
   templateUrl: './table.component.html',
   styleUrls: ['./table.component.css'],
 })
-export class TableComponent {
-  constructor(private operation: OperationsService) {}
-
-  ngOnInit() {
-    this.operation.getOperation('/framework').subscribe({
-      next: (data) => {
-        console.log(data);
-      },
-      error: (err) => {
-        console.log(err);
-      },
-    });
-  }
+export class TableComponent implements AfterViewInit {
+  @Input() frameworkList: any;
+  @Output() onEdit: EventEmitter<any> = new EventEmitter()
+  @ViewChild('table') table!: ElementRef;
 
   tableData = [
     {
@@ -29,4 +20,13 @@ export class TableComponent {
       editImageSrc: './assets/images/edit.svg',
     },
   ];
+
+  ngAfterViewInit() {
+    const selectElement = $(this.table.nativeElement);
+    selectElement.DataTable();
+  }
+
+  onEditData(item: any) {
+    this.onEdit.emit(item);
+  }
 }
