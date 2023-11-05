@@ -1,5 +1,6 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 import { OperationsService } from 'src/app/services/operations.service';
 
 @Component({
@@ -9,7 +10,10 @@ import { OperationsService } from 'src/app/services/operations.service';
 })
 export class FrameworkDomainFormComponent {
   form!: FormGroup;
-  constructor(private fb: FormBuilder, private operations: OperationsService) { }
+  frameworkId: any;
+  constructor(private fb: FormBuilder, private operations: OperationsService, private route: ActivatedRoute) {
+    this.frameworkId = this.route.snapshot.params['id'];
+  }
 
   ngOnInit() {
     this.form = this.fb.group({
@@ -75,7 +79,7 @@ export class FrameworkDomainFormComponent {
   }
 
   onSubmit() {
-    this.operations.addDomain(this.form.value).subscribe({
+    this.operations.addDomain({ ...this.form.value, framworkId: this.frameworkId }).subscribe({
       next: (response) => {
         console.log(response);
       },

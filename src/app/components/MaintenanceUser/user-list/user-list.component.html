@@ -1,15 +1,14 @@
 <div class="sortTableContainer">
   <div class="table-responsive">
-    <table class="table" style="min-width: 1000px;">
+    <table #table class="table" style="min-width: 1000px;">
       <thead>
-        <tr>
-          <th width="15%"><span>Name</span></th>
-          <th width="17%"><span>Email</span></th>
-          <th width="13%"><span>Role</span></th>
-          <th width="14%"><span>Department</span></th>
-          <th width="8%"><span>Password</span></th>
-          <th width="20%" style="text-align: center;"><span>Status</span></th>
-          <th width="12%"><span>Action</span></th>
+        <tr class="tablesorter-headerRow">
+          <th width="15%" *ngFor="let header of tableHeaders" [attr.data-column]="header.index"
+            style="user-select: none;">
+            <div>
+              <span>{{ header.label }}</span>
+            </div>
+          </th>
         </tr>
       </thead>
       <tbody>

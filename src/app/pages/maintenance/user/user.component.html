@@ -50,8 +50,6 @@
 </app-modal>
 
 <div class="contentWrapper">
-    <app-page-header [pageTitle]="'User'"></app-page-header>
-    <app-user-list [userList]="userList"></app-user-list>
-    <app-pagination [resultsPerPage]="resultsPerPage" [totalResults]="totalResults" [currentPage]="currentPage"
-        (pageChange)="onPageChange($event)"></app-pagination>
+    <app-page-header [pageTitle]="'User'" (onSearch)="search($event)"></app-page-header>
+    <app-user-list [userList]="userList" [search]="searchValue"></app-user-list>
 </div>

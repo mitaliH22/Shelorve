@@ -48,6 +48,7 @@ import { NgxIntlTelInputModule } from '@khazii/ngx-intl-tel-input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Select2Component } from './shared/select2/select2.component';
+import { DataTablesModule } from "angular-datatables";
 
 @NgModule({
   declarations: [
@@ -103,6 +104,7 @@ import { Select2Component } from './shared/select2/select2.component';
     BrowserAnimationsModule,
     HttpClientModule,
     RouterModule,
+    DataTablesModule,
     RouterModule.forRoot([]),
   ],
   providers: [],

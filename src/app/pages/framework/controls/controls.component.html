@@ -30,8 +30,6 @@
 
 <div class="contentWrapper">
     <app-framework-title></app-framework-title>
-    <app-framework-header></app-framework-header>
-    <app-controls-table [controlsList]="controlsList"></app-controls-table>
-    <app-pagination [resultsPerPage]="resultsPerPage" [totalResults]="totalResults" [currentPage]="currentPage"
-        (pageChange)="onPageChange($event)"></app-pagination>
+    <app-framework-header (onSearch)="search($event)"></app-framework-header>
+    <app-controls-table [controlsList]="controlsList" [search]="searchValue"></app-controls-table>
 </div>

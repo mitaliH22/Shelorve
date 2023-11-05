@@ -24,7 +24,7 @@ const routes: Routes = [
   },
   { path: 'users', component: UserComponent, data: { breadcrumb: 'User' } },
   {
-    path: 'frameworks/:slug',
+    path: 'frameworks/:id/:slug',
     children: [
       {
         path: '',

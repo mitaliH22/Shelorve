@@ -1,30 +1,30 @@
 <div class="pageTitle">
-                <div class="ptRow d-flex justify-content-between align-items-center">
-                    <div>
-                        <ul class="list-unstyled d-flex align-items-center">
-                            <li><a href="./dashboard.html">Home</a></li>
-                            <li>
-                                <img src="./assets/images/right-arrow-dark.svg" />
-                            </li>
-                            <li>{{ pageTitle }}</li>
-                        </ul>
-                        <h1><img src="./assets/images/maintenance_dark.svg" /> {{ pageTitle }}</h1>
+    <div class="ptRow d-flex justify-content-between align-items-center">
+        <div>
+            <ul class="list-unstyled d-flex align-items-center">
+                <li><a href="./dashboard.html">Home</a></li>
+                <li>
+                    <img src="./assets/images/right-arrow-dark.svg" />
+                </li>
+                <li>{{ pageTitle }}</li>
+            </ul>
+            <h1><img src="./assets/images/maintenance_dark.svg" /> {{ pageTitle }}</h1>
+        </div>
+        <ul class="tableFilters list-unstyled d-flex align-items-center mb-0 py-3 ms-auto">
+            <li>
+                <div class="headerSearch">
+                    <input type="text" placeholder="Search..." class="searchInput" (change)="search($event)" />
+                    <div class="searchIconContainer">
+                        <img src="./assets/images/search.svg" />
                     </div>
-                    <ul class="tableFilters list-unstyled d-flex align-items-center mb-0 py-3 ms-auto">
-                        <li>
-                            <div class="headerSearch">
-                                <input type="text" placeholder="Search..." class="searchInput" />
-                                <div class="searchIconContainer">
-                                    <img src="./assets/images/search.svg" />
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <app-add-user-form></app-add-user-form>
-                        </li>
-                           <li>
-                            <app-upload-framework></app-upload-framework>
-                        </li>
-                    </ul>
                 </div>
-            </div>
+            </li>
+            <li>
+                <app-add-user-form></app-add-user-form>
+            </li>
+            <li>
+                <app-upload-framework></app-upload-framework>
+            </li>
+        </ul>
+    </div>
+</div>

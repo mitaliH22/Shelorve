@@ -20,8 +20,6 @@
     "@angular/router": "^16.2.0",
     "@khazii/ngx-intl-tel-input": "^3.3.1",
     "@types/select2": "^4.0.60",
-    "datatables.net": "^1.13.6",
-    "datatables.net-dt": "^1.13.6",
     "intl-tel-input": "^17.0.21",
     "jquery": "^3.7.1",
     "rxjs": "~7.8.0",

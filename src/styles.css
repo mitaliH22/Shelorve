@@ -189,19 +189,6 @@ textarea,
     padding: 12px 15px 12px 0px;
 }
 
-.sortTableContainer table th span:after,
-.sortTableContainer table th span:before {
-    border: 0.35em solid transparent;
-    content: "";
-    height: 0;
-    position: absolute;
-    right: -20px;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: border-color 0.2s ease-in-out;
-    width: 0;
-}
-
 .table>:not(:last-child)>:last-child>* {
     border-bottom-color: inherit !important;
 }

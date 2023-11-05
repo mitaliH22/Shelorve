@@ -7,14 +7,8 @@ declare var $: any;
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent implements AfterViewInit {
+export class AppComponent {
   title = 'shelorve-admin';
-  @ViewChild('table') table!: ElementRef;
-
-  ngAfterViewInit() {
-    const selectElement = $(this.table.nativeElement);
-    selectElement.DataTable();
-  }
 
   constructor(private router: Router) {
     this.router.events.subscribe((event) => {

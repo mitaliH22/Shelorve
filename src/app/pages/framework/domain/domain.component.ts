@@ -8,7 +8,14 @@ import { OperationsService } from 'src/app/services/operations.service';
   styleUrls: ['./domain.component.css']
 })
 export class DomainComponent {
-  constructor(private operations: OperationsService, private route: ActivatedRoute) { }
+  id!: number;
+  slug!: string;
+  searchValue!: string;
+  constructor(private operations: OperationsService, private route: ActivatedRoute) { 
+    const { id, slug } = this.route.snapshot.params;
+    this.id = id;
+    this.slug = slug;
+  }
   totalResults: number = 0;
   resultsPerPage: number = 10;
   currentPage: number = 1;
@@ -16,11 +23,9 @@ export class DomainComponent {
 
   domainList!: any;
   ngOnInit() {
-
-
-    this.operations.getOperation('/domain').subscribe({
-      next: (data) => {
-        this.domainList = data;
+    this.operations.getOperation(`/frameworksDomain/${this.id}`).subscribe({
+      next: (data: any) => {
+        this.domainList = data;  
         this.totalResults = this.domainList?.length || 0;
       },
       error: (err) => {
@@ -39,6 +44,10 @@ export class DomainComponent {
 
   onFileSelected(event: any): void {
     this.selectedFile = event.target?.files[0]?.name;
+  }
+
+  search(e:any){
+    this.searchValue = e.target.value;
   }
 
 }

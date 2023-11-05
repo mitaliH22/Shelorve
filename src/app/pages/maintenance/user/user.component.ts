@@ -11,6 +11,7 @@ export class UserComponent {
   resultsPerPage: number = 10;
   currentPage: number = 1;
   selectedFile: any;
+  searchValue!: string;
 
   constructor(private operation: OperationsService) { }
   userList!: any;
@@ -38,5 +39,9 @@ export class UserComponent {
 
   onFileSelected(event: any): void {
     this.selectedFile = event.target?.files[0]?.name;
+  }
+
+  search(e:any){
+    this.searchValue = e.target.value;
   }
 }

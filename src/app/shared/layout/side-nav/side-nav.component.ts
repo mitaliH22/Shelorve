@@ -34,8 +34,8 @@ export class SideNavComponent {
       this.menuItems = data.map((item: Framework) => {
         return {
           id: item.frameworksID,
-          link: `/frameworks/${item.frameworksName}`,
-          label: item.frameworksDescription
+          link: `/frameworks/${item.frameworksID}/${item.frameworksName}`,
+          label: item.frameworksName
         };
       });
 
